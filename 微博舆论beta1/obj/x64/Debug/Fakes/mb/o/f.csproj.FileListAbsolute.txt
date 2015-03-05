@@ -1,0 +1,11 @@
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.xml
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\Newtonsoft.Json.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\f.csprojResolveAssemblyReference.cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\MyBtn.1.0.0.0.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\MyBtn.1.0.0.0.Fakes.pdb

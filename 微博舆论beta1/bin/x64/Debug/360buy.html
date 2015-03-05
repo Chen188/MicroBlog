@@ -1,0 +1,970 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="charset" content="utf-8">
+
+    <script type="text/javascript">
+        var domainName = getDomainName(), paras=(location.href.split(".html")[0]).split("-");
+        function getDomainName() {var domainN = location.hostname;if ( domainN.indexOf("360buy") > 0 ) {domainN = "360buy"+domainN.split("360buy")[1];} else if ( domainN.indexOf("jd") > 0 ) {domainN = "jd"+domainN.split("jd")[1];}return domainN;}
+        var jd = {}; jd.plist = {}; jd.iplocation = { "北京": 1, "上海": 2, "天津": 3, "重庆": 4, "河北": 5, "山西": 6, "河南": 7, "辽宁": 8, "吉林": 9, "黑龙江": 10, "内蒙古": 11, "江苏": 12, "山东": 13, "安徽": 14, "浙江": 15, "福建": 16, "湖北": 17, "湖南": 18, "广东": 19, "广西": 20, "江西": 21, "四川": 22, "海南": 23, "贵州": 24, "云南": 25, "西藏": 26, "陕西": 27, "甘肃": 28, "青海": 29, "宁夏": 30, "新疆": 31, "台湾": 32, "香港": 42, "澳门": 43 };
+        jd.plist.getNameById = function(id) { for (var o in jd.iplocation) { if (jd.iplocation[o] == id) return o;} return "北京" ;};
+        jd.plist.cookieEditer = {
+            getCookie: function(name) { var start = document.cookie.indexOf(name + "="); var len = start + name.length + 1; if ((!start) && (name != document.cookie.substring(0, name.length))) return null; if (start == -1) return null; var end = document.cookie.indexOf(';', len); if (end == -1) end = document.cookie.length; return unescape(document.cookie.substring(len, end)) },
+            setCookie: function(name, value, expires, path, domain, secure) {
+                var today = new Date();
+                today.setTime(today.getTime());
+                if (expires)
+                    expires = expires * 1000 * 60 * 60 * 24;
+                var expires_date = new Date(today.getTime() + (expires));
+                document.cookie = name + '=' + escape(value) + ((expires) ? ';expires=' + expires_date.toGMTString() : '') + ((path) ? ';path=' + path : '') + ((domain) ? ';domain=' + domain : '') + ((secure) ? ';secure' : '');
+            }
+        };
+            jd.plist.locationProcess = function() {
+
+            var proid;
+
+            if(paras[1]==794||paras[1]==6880||paras[2]==655){
+                proid  = this.cookieEditer.getCookie("ipLoc-djd");
+
+
+                if (!proid||proid=="0-0-0"||proid.split("-").length!=3) {
+                    proid = "1-72-4137";
+                }
+
+                proid = proid + "-33"
+
+            }else{
+                proid  = this.cookieEditer.getCookie("ipLoc-djd");
+                if (!proid||proid=="0-0-0"||proid.split("-").length!=3) {
+                    proid = "1-72-4137";
+                }
+                proid = proid + "-0"
+            }
+
+
+
+            proid = proid.split("-");
+
+            var url = location.href.toLowerCase(),pl=paras.length;
+            if (pl == 3) {
+                url = url.replace(".html", "-0-0-0-0-0-0-0-1-1-1-1-" + proid[0] + "-"+proid[1] + "-" + proid[2] + "-" + proid[3] + ".html");
+            } else if (pl == 13) { //手机、运营商支持一品多商和分区之前的不带库存的url长度=13
+                paras[13]=1;paras[14]=proid[0]; paras[15]=proid[1];paras[16]=proid[2]; paras[17]=proid[3]; url=paras.join("-")+".html";
+            } else if (pl == 14) { //手机、运营商支持一品多商至支持分区之间的不带库存的url长度=14
+                paras[14]=proid[0]; paras[15]=proid[1];paras[16]=proid[2]; paras[17]=proid[3]; url=paras.join("-")+".html";
+            } else if (pl == 16) { //手机、运营商支持一品多商和分区之前带库存的url长度=15
+                paras[13]=1;paras[14]=proid[0]; paras[15]=proid[1];paras[16]=proid[2]; paras[17]=proid[3]; url=paras.join("-")+".html";
+            } else if (pl == 17 && paras[1]=="794") { //大家电支持一品多商之前带库存的url长度=16
+                paras[17]=paras[16]; paras[16]=paras[15]; paras[15]=paras[14]; paras[14]=paras[13]; paras[13]=1;url=paras.join("-")+".html";
+            } else if (pl == 17 && paras[1]!="794") { //手机、运营商支持一品多商至分区之间带库存的url长度=16
+                paras[17]=paras[16]; paras[14]=proid[0]; paras[15]=proid[1];paras[16]=proid[2];  url=paras.join("-")+".html";
+            } else if (pl == 18 && (paras[14]!=proid[0])||paras[15]!=proid[1]||paras[16]!=proid[2]) {
+                this.cookieEditer.setCookie("ipLoc-djd", paras[14]+"-"+paras[15]+"-"+paras[16], 30, "/", domainName, false);
+                var proname = jd.plist.getNameById(paras[14]);
+                this.cookieEditer.setCookie("ipLocation", proname, 30, "/", domainName, false);
+            }
+            if (url != location.href.toLowerCase()) {
+                window.location = url;
+            }
+        };
+        jd.plist.locationProcess();
+    </script>
+    <title>手机 【行情 价格 评价 正品行货】-京东商城</title>
+<meta name="keywords" content="手机,手机通讯,手机,手机报价、促销、新闻、评论、导购、图片" />
+<meta name="description" content="京东JD.COM是国内最专业的手机,手机通讯,手机,手机网上购物商城，本频道提供手机,手机通讯,手机,手机的最新报价、促销、评论、导购、图片等相关信息" />
+
+    <script>var jdpts = new Object(); jdpts._st = new Date().getTime();</script>
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/lib/skin/2013/base.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/201007/skin/df/plist20130828.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="http://misc.360buyimg.com/contrast/skin/2012/pop_compare.css?t=20121220" media="all" />
+
+    
+    <script type="text/javascript" src="http://misc.360buyimg.com/lib/js/e/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript">window.pageConfig = { compatible: true }; </script>
+</head>
+<body>
+<script type="text/javascript" src="http://misc.360buyimg.com/lib/js/2012/base-2011.js" charset="gb2312"></script>
+<div id="shortcut-2013">
+    <div class="w">
+        <ul class="fl lh">
+            <li class="fore1 ld"><b></b><a href="javascript:addToFavorite()" rel="nofollow">收藏京东</a></li>
+        </ul>
+        <ul class="fr lh">
+            <li class="fore1" id="loginbar">您好！欢迎来到京东！<a href="javascript:login()">[登录]</a>&nbsp;<a href="javascript:regist()">[免费注册]</a></li>
+            <li class="fore2 ld">
+                <s></s>
+                <a href="http://jd2008.jd.com/JdHome/OrderList.aspx" rel="nofollow">我的订单</a>
+            </li>
+            <li class="fore3 ld">
+                <s></s>
+                <a href="http://app.jd.com/" target="_blank">手机京东</a>
+            </li>
+            <li class="fore4 ld menu" id="biz-service" data-widget="dropdown">
+                <s></s>
+                <span class="outline"></span>
+                <span class="blank"></span>
+                客户服务
+                <b></b>
+                <div class="dd">
+                    <div><a href="http://help.jd.com/index.html" target="_blank">帮助中心</a></div>
+                    <div><a href="http://myjd.jd.com/repair/orderlist.action" target="_blank" rel="nofollow">售后服务</a></div>
+                    <div><a href="http://chat.jd.com/jdchat/custom.action" target="_blank" rel="nofollow">在线客服</a></div>
+                    <div><a href="http://myjd.jd.com/opinion/list.action" target="_blank" rel="nofollow">投诉中心</a></div>
+                    <div><a href="http://www.jd.com/contact/service.html" target="_blank">客服邮箱</a></div>
+                </div>
+            </li>
+            <li class="fore5 ld menu" id="site-nav" data-widget="dropdown">
+                <s></s>
+                <span class="outline"></span>
+                <span class="blank"></span>
+                网站导航
+                <b></b>
+                <div class="dd lh">
+                    <dl class="item fore1">
+                        <dt>特色栏目</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://my.jd.com/personal/guess.html">为我推荐</a></div>
+                            <div><a target="_blank" href="http://shipingou.jd.com/">视频购物</a></div>
+                            <div><a target="_blank" href="http://club.jd.com/">京东社区</a></div>
+                            <div><a target="_blank" href="http://xiaoyuan.jd.com/">校园频道</a></div>
+                            <div><a target="_blank" href="http://read.jd.com/">在线读书</a></div>
+                            <div><a target="_blank" href="http://diy.jd.com/">装机大师</a></div>
+                            <div><a target="_blank" href="http://market.jd.com/giftcard/">礼品卡</a></div>
+                        </dd>
+                    </dl>
+                    <dl class="item fore2">
+                        <dt>企业服务</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://market.jd.com/giftcard/company/default.aspx">企业客户</a></div>
+                            <div><a target="_blank" href="http://sale.jd.com/p10997.html">办公直通车</a></div>
+                        </dd>
+                    </dl>
+                    <dl class="item fore3">
+                        <dt>旗下网站</dt>
+                        <dd>
+                            <div><a target="_blank" href="http://www.360top.com/">360TOP</a></div>
+                            <div><a target="_blank" href="http://www.minitiao.com/">迷你挑</a></div>
+                            <div><a target="_blank" href="http://en.360buy.com/">English Site</a></div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+        </ul>
+        <span class="clr"></span>
+    </div>
+</div><!--shortcut end-->
+<div id="o-header-2013">
+    <div class="w" id="header-2013">
+        <div id="logo-2013" class="ld"><a href="http://www.jd.com/" hidefocus="true"><b></b><img src="http://misc.360buyimg.com/lib/img/e/logo-201305.png" width="270" height="60" alt="京东"></a></div>
+        <!--logo end-->
+        <div id="search-2013">
+            <div class="i-search ld">
+                <ul id="shelper" class="hide">
+                </ul>
+                <div class="form"
+                        >
+                    <input type="text" class="text" accesskey="s" id="key" autocomplete="off" onkeydown="javascript:if(event.keyCode==13) search('key');">
+                    <input type="button" value="搜索" class="button" onclick="search('key');return false;">
+                </div>
+            </div>
+            <div id="hotwords"></div>
+        </div>
+        <!--search end-->
+        <div id="my360buy-2013">
+            <dl>
+                <dt class="ld"><s></s><a href="http://home.jd.com/">我的京东</a><b></b></dt>
+                <dd>
+                    <div class="loading-style1"><b></b>加载中，请稍候...</div>
+                </dd>
+            </dl>
+        </div>
+        <!--my360buy end-->
+        <div id="settleup-2013">
+            <dl>
+                <dt class="ld"><s></s><span class="shopping"><span id="shopping-amount"></span></span><a href="http://cart.jd.com/cart/cart.html" id="settleup-url">去购物车结算</a> <b></b> </dt>
+                <dd>
+                    <div class="prompt">
+                        <div class="loading-style1"><b></b>加载中，请稍候...</div>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <!--settleup end-->
+    </div>
+    <!--header end-->
+    <div class="w">
+        <div id="nav-2013">
+            <div id="categorys-2013">
+                <div class="mt ld">
+                    <h2><a href="http://www.jd.com/allSort.aspx">全部商品分类<b></b></a></h2>
+                </div>
+                <div id="_JD_ALLSORT" class="mc"></div>
+            </div>
+            <div id="treasure"></div>
+            <ul id="navitems-2013">
+                <li class="fore1" id="nav-home"><a href="http://www.jd.com/">首页</a></li>
+                <li class="fore2" id="nav-fashion"><a href="http://fashion.jd.com/">服装城</a></li>
+                <li class="fore3" id="nav-chaoshi"><a href="http://channel.jd.com/chaoshi.html" target="_blank">京东超市</a></li>
+                <li class="fore4" id="nav-tuan"><a href="http://tuan.jd.com/" target="_blank">团购</a></li>
+                <li class="fore5" id="nav-auction"><a href="http://auction.jd.com/">夺宝岛</a></li>
+                <li class="fore6" id="nav-wan"><a href="http://wan.jd.com/">在线游戏</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    (function(){if(pageConfig.navId){var object=document.getElementById("nav-"+pageConfig.navId);if(object)object.className+=" curr";}})();
+</script>
+<!-- header end -->
+<div class="w">
+    <div class="breadcrumb">
+        <strong><a href="http://shouji.jd.com" >手机</a></strong><span>&nbsp;&gt;&nbsp;<a href="http://channel.jd.com/shouji.html" >手机通讯</a>&nbsp;&gt;&nbsp;<a href="http://list.jd.com/9987-653-655.html" >手机</a></span>
+
+    </div>
+</div>
+<!--crumb end-->
+<div class="w main">
+    <div class="right-extra">
+        <div class="m" id="i-right">
+            <div id="hotsale" clstag="thirdtype|keycount|thirdtype|hotsaleM" reco_id="3"><div class="mt"><h2>热卖推荐</h2></div>
+                <!--热销商品-->
+                
+<div class="mc list-h" rfid=326><dl><dt><a href="http://item.jd.com/858682.html" target="_blank"><img alt="小米2A"src="http://img12.360buyimg.com/n4/g10/M00/14/10/rBEQWVFn5JAIAAAAAADHbtpbCmIAAEARQD53T0AAMeG463.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/858682.html" target="_blank">小米2A<font color="#ff6600">各仓现货抢，人气机皇！骁龙CPU，4.5英寸，1+16G，200+800万摄像头，2030mAh！</font></a></div><div class="p-price"  sku='858682'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=858682&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl><dl><dt><a href="http://item.jd.com/576960.html" target="_blank"><img alt="三星 I929 电信3G手机 （金属灰）CDMA2000/GSM 双模双待双通"src="http://img10.360buyimg.com/n4/3020/23e64a54-7309-4e93-a159-7896903e9e51.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/576960.html" target="_blank">三星 I929 电信3G手机 （金属灰）CDMA2000/GSM 双模双待双通<font color="#ff6600">经典盖世SII，超4000好评！4.5英寸Super AMOLED Plus魔力屏，1.2G双核处理器，双模双待尽显精英本色！</font></a></div><div class="p-price"  sku='576960'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=576960&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl><dl><dt><a href="http://item.jd.com/937217.html" target="_blank"><img alt="诺基亚  Lumia 625H  特价啦，色彩缤纷等你来抢！"src="http://img12.360buyimg.com/n4/g15/M03/01/08/rBEhWFHw5zAIAAAAAAGPntEVrscAABYdgOmu3IAAY-2911.jpg"width="100" height="100"/></a></dt><dd><div class="p-name"><a href="http://item.jd.com/937217.html" target="_blank">诺基亚  Lumia 625H  特价啦，色彩缤纷等你来抢！<font color="#ff6600">送移动电源！潮人首选！4.7英寸，诺记最大屏手机，给你“大”不同！ </font></a></div><div class="p-price"  sku='937217'>特价：<strong></strong></div><div class="btns"><a href="http://gate.jd.com/InitCart.aspx?pid=937217&amp;pcount=1&amp;ptype=1" target="_blank">立即抢购</a></div></dd></dl></div>
+
+            </div>
+            <div id="market" clstag="thirdtype|keycount|thirdtype|market"><div class="mt"><h2>促销活动</h2></div>
+                <div class="mc">
+                    <!--促销活动-->
+                    
+<ul><li>·<a href="http://www.jd.com/news.aspx?id=14372" target="_blank">你的安全，我买单！</a></li><li>·<a href="http://www.jd.com/news.aspx?id=14340" target="_blank">限时限量全民疯抢苹果5S土豪金</a></li><li>·<a href="http://www.jd.com/news.aspx?id=14338" target="_blank">福建联通开区豪送5s</a></li><li>·<a href="http://www.jd.com/news.aspx?id=14302" target="_blank">电信”手机吧“开业啦</a></li><li>·<a href="http://www.jd.com/news.aspx?id=14177" target="_blank">高通骁龙旗舰店登陆京东！</a></li></ul>
+
+                </div>
+            </div>
+        </div>
+        <div id='select' class='m' clstag='thirdtype|keycount|thirdtype|select'>
+<div class='mt'><h1>手机<strong>&nbsp;-&nbsp;商品筛选</strong></h1><div class='extra'><a href='9987-653-655.html'>重置筛选条件</a></div></div>
+<dl class='fore' id='select-brand'>
+<dt>品牌：</dt><dd><span id='select-hold'></span>
+<ul class='tab'>
+<li class='curr' rel='0'>所有品牌<b></b></li>
+<li rel='1'>ABCD<b></b></li>
+<li rel='2'>EFG<b></b></li>
+<li rel='3'>HIJK<b></b></li>
+<li rel='4'>LMN<b></b></li>
+<li rel='5'>OPQ<b></b></li>
+<li rel='6'>RST<b></b></li>
+<li rel='7'>UVW<b></b></li>
+<li rel='8'>XYZ<b></b></li>
+</ul>
+<div class='content'>
+<div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='6'><a id='15127' href='9987-653-655-15127-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >三星（SAMSUNG）</a></div><div rel='5'><a id='14026' href='9987-653-655-14026-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >苹果（Apple）</a></div><div rel='3'><a id='8557' href='9987-653-655-8557-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >华为（HUAWEI）</a></div><div rel='4'><a id='13539' href='9987-653-655-13539-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >诺基亚（NOKIA）</a></div><div rel='4'><a id='11516' href='9987-653-655-11516-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >联想（Lenovo）</a></div><div rel='3'><a id='1115' href='9987-653-655-1115-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >HTC</a></div><div rel='8'><a id='21011' href='9987-653-655-21011-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >中兴（ZTE）</a></div><div rel='6'><a id='16538' href='9987-653-655-16538-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >索尼（SONY）</a></div><div rel='8'><a id='18374' href='9987-653-655-18374-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >小米（MI）</a></div><div rel='3'><a id='10640' href='9987-653-655-10640-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >酷派（Coolpad）</a></div><div rel='4'><a id='12669' href='9987-653-655-12669-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >魅族（MEIZU）</a></div><div rel='7'><a id='25591' href='9987-653-655-25591-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >vivo</a></div><div rel='3'><a id='9420' href='9987-653-655-9420-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >金立（Gionee）</a></div><div rel='6'><a id='2505' href='9987-653-655-2505-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >TCL</a></div><div rel='5'><a id='6742' href='9987-653-655-6742-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >飞利浦（PHILIPS）</a></div><div rel='6'><a id='16975' href='9987-653-655-16975-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >天语（K-Touch）</a></div><div rel='3'><a id='7888' href='9987-653-655-7888-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >海信（Hisense）</a></div><div rel='4'><a id='1528' href='9987-653-655-1528-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >LG</a></div><div rel='1'><a id='36654' href='9987-653-655-36654-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >大显（DaXian）</a></div><div rel='3'><a id='36404' href='9987-653-655-36404-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >金圣达（GRSED）</a></div><div rel='4'><a id='36659' href='9987-653-655-36659-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >乐目（OINOM）</a></div><div rel='4'><a id='27094' href='9987-653-655-27094-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >努比亚</a></div><div rel='3'><a id='36362' href='9987-653-655-36362-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >嘉源（Cayon）</a></div><div rel='8'><a id='37267' href='9987-653-655-37267-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >英特奇（intki）</a></div><div rel='3'><a id='10574' href='9987-653-655-10574-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >垦鑫达</a></div><div rel='8'><a id='20995' href='9987-653-655-20995-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >中诺（CHINO-E）</a></div><div rel='8'><a id='20130' href='9987-653-655-20130-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >优思（Uniscope）</a></div><div rel='4'><a id='36658' href='9987-653-655-36658-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >乐丰（lephone）</a></div><div rel='5'><a id='2032' href='9987-653-655-2032-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >OPPO</a></div><div rel='4'><a id='13477' href='9987-653-655-13477-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >纽曼（Newsmy）</a></div><div rel='4'><a id='36660' href='9987-653-655-36660-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >乐派（NETPAL）</a></div><div rel='6'><a id='38125' href='9987-653-655-38125-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >SUGAR</a></div><div rel='7'><a id='36662' href='9987-653-655-36662-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >葳朗（V.LAND）</a></div><div rel='6'><a id='36661' href='9987-653-655-36661-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >三盟（SANMENG）</a></div><div rel='8'><a id='18095' href='9987-653-655-18095-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >夏新（Amoi）</a></div><div rel='1'><a id='41143' href='9987-653-655-41143-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >传奇（SAGA）</a></div><div rel='8'><a id='30866' href='9987-653-655-30866-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >100＋</a></div><div rel='4'><a id='13066' href='9987-653-655-13066-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >摩托罗拉（Motorola）</a></div><div rel='1'><a id='5565' href='9987-653-655-5565-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >创维（Skyworth）</a></div><div rel='8'><a id='18078' href='9987-653-655-18078-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >夏朗（NAMO）</a></div><div rel='3'><a id='10317' href='9987-653-655-10317-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >康佳（KONKA）</a></div><div rel='5'><a id='45757' href='9987-653-655-45757-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >欧奇（ouki）</a></div><div rel='1'><a id='37264' href='9987-653-655-37264-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >爱意通（aiyitong）</a></div><div rel='8'><a id='36397' href='9987-653-655-36397-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >亿城（Yicheer）</a></div><div rel='1'><a id='3659' href='9987-653-655-3659-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >奥克斯（AUX）</a></div><div rel='8'><a id='36364' href='9987-653-655-36364-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >新中桥（NCBC）</a></div><div rel='1'><a id='20710' href='9987-653-655-20710-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >长虹（CHANGHONG）</a></div><div rel='3'><a id='7817' href='9987-653-655-7817-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >海尔（Haier）</a></div><div rel='1'><a id='36651' href='9987-653-655-36651-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >奥乐（AOLE）</a></div><div rel='3'><a id='36656' href='9987-653-655-36656-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >基伍（G'FIVE）</a></div><div rel='7'><a id='45890' href='9987-653-655-45890-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >微诺（VANO）</a></div><div rel='1'><a id='36652' href='9987-653-655-36652-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >贝尔丰（BIFER）</a></div><div rel='1'><a id='36417' href='9987-653-655-36417-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >爱贝多（aibeiduo）</a></div><div rel='2'><a id='43644' href='9987-653-655-43644-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >21克</a></div><div rel='1'><a id='4986' href='9987-653-655-4986-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >波导（BiRD）</a></div><div rel='6'><a id='15992' href='9987-653-655-15992-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >首信（COPITEL）</a></div><div rel='1'><a id='6522' href='9987-653-655-6522-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >朵唯（DOOV）</a></div><div rel='7'><a id='45759' href='9987-653-655-45759-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >西维（WISHWAY）</a></div><div rel='2'><a id='6860' href='9987-653-655-6860-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >斐讯（PHICOMM）</a></div><div rel='6'><a id='37014' href='9987-653-655-37014-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >三巨网（3GNET）</a></div><div rel='6'><a id='22171' href='9987-653-655-22171-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >天迈</a></div><div rel='5'><a id='14061' href='9987-653-655-14061-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >普莱达（PULID）</a></div><div rel='1'><a id='6333' href='9987-653-655-6333-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >东信</a></div><div rel='6'><a id='37265' href='9987-653-655-37265-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >三普（Sunup）</a></div><div rel='6'><a id='14734' href='9987-653-655-14734-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >荣事达（Royalstar）</a></div><div rel='8'><a id='20086' href='9987-653-655-20086-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >优摩（UMO）</a></div><div rel='8'><a id='22252' href='9987-653-655-22252-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >中国移动</a></div><div rel='4'><a id='36657' href='9987-653-655-36657-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >朗界（RugGear）</a></div><div rel='7'><a id='38547' href='9987-653-655-38547-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >联合时代（UTime）</a></div><div rel='1'><a id='22538' href='9987-653-655-22538-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >100%直供机</a></div><div rel='4'><a id='39525' href='9987-653-655-39525-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >美晨</a></div><div rel='5'><a id='14125' href='9987-653-655-14125-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >七喜（HEDY）</a></div><div rel='8'><a id='20336' href='9987-653-655-20336-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >语音王</a></div><div rel='4'><a id='22528' href='9987-653-655-22528-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >摩奇（MUCH）</a></div><div rel='1'><a id='6121' href='9987-653-655-6121-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >迪士尼（Disney）</a></div><div rel='1'><a id='22437' href='9987-653-655-22437-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >deovo</a></div><div rel='4'><a id='38126' href='9987-653-655-38126-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >美图（Meitu）</a></div><div rel='1'><a id='22238' href='9987-653-655-22238-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >大可乐（dakele）</a></div><div rel='3'><a id='26447' href='9987-653-655-26447-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >HIKe</a></div><div rel='8'><a id='21130' href='9987-653-655-21130-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >卓普（ZOPO）</a></div><div rel='3'><a id='8551' href='9987-653-655-8551-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >华硕（ASUS）</a></div><div rel='5'><a id='13641' href='9987-653-655-13641-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >欧恩（ONN）</a></div><div rel='1'><a id='6012' href='9987-653-655-6012-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >德赛（DESAY）</a></div><div rel='2'><a id='36675' href='9987-653-655-36675-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >E派（EBEST）</a></div><div rel='5'><a id='14478' href='9987-653-655-14478-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >青橙（GreenOrange）</a></div><div rel='1'><a id='36653' href='9987-653-655-36653-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >博沃（BOVO）</a></div><div rel='7'><a id='17263' href='9987-653-655-17263-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >万利达（MALATA）</a></div><div rel='1'><a id='3998' href='9987-653-655-3998-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >百分百（BFB）</a></div><div rel='4'><a id='38605' href='9987-653-655-38605-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >MANN</a></div><div rel='6'><a id='45449' href='9987-653-655-45449-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >瑞恒</a></div><div rel='1'><a id='21378' href='9987-653-655-21378-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >中国电信</a></div><div rel='4'><a id='36398' href='9987-653-655-36398-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >里奥（NEO）</a></div><div rel='8'><a id='26766' href='9987-653-655-26766-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >原点</a></div><div rel='5'><a id='38536' href='9987-653-655-38536-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >派信（PISIN）</a></div><div rel='8'><a id='21392' href='9987-653-655-21392-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >中国联通</a></div><div rel='1'><a id='22465' href='9987-653-655-22465-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >callbar</a></div><div rel='3'><a id='1430' href='9987-653-655-1430-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >酷比（koobee）</a></div><div rel='8'><a id='20333' href='9987-653-655-20333-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >语信（YUSUN）</a></div><div rel='4'><a id='11515' href='9987-653-655-11515-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >联想</a></div><div rel='3'><a id='36379' href='9987-653-655-36379-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >今典（Jeed）</a></div><div rel='8'><a id='18083' href='9987-653-655-18083-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >夏普（SHARP）</a></div><div rel='2'><a id='27128' href='9987-653-655-27128-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >GEAK</a></div><div rel='7'><a id='41339' href='9987-653-655-41339-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >优快（U&K）</a></div><div rel='5'><a id='14151' href='9987-653-655-14151-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >其它</a></div></div>
+</dd></dl>
+<dl >
+<dt>网络：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='1269' href='9987-653-655-0-1269-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >联通3G（WCDMA）</a></div><div rel='0'><a id='1285' href='9987-653-655-0-1285-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >电信3G（CDMA2000）</a></div><div rel='0'><a id='1463' href='9987-653-655-0-1463-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >移动3G（TD-SCDMA）</a></div><div rel='0'><a id='1449' href='9987-653-655-0-1449-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >移动2G/联通2G（GSM）</a></div><div rel='0'><a id='1282' href='9987-653-655-0-1282-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >电信2G（CDMA）</a></div><div rel='0'><a id='1458' href='9987-653-655-0-1458-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >双模（电信＋移动/联通2G）</a></div><div rel='0'><a id='10998' href='9987-653-655-0-10998-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' >双卡</a></div></dd></dl>
+<dl >
+<dt>价格：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='10999' href='9987-653-655-0-0-10999-0-0-0-0-1-1-1-1-1-72-4137-33.html' >5000以上</a></div><div rel='0'><a id='100295' href='9987-653-655-0-0-100295-0-0-0-0-1-1-1-1-1-72-4137-33.html' >4000-4999</a></div><div rel='0'><a id='8875' href='9987-653-655-0-0-8875-0-0-0-0-1-1-1-1-1-72-4137-33.html' >3000-3999</a></div><div rel='0'><a id='8867' href='9987-653-655-0-0-8867-0-0-0-0-1-1-1-1-1-72-4137-33.html' >2000-2999</a></div><div rel='0'><a id='501813' href='9987-653-655-0-0-501813-0-0-0-0-1-1-1-1-1-72-4137-33.html' >1500-1999</a></div><div rel='0'><a id='8866' href='9987-653-655-0-0-8866-0-0-0-0-1-1-1-1-1-72-4137-33.html' >1000-1499</a></div><div rel='0'><a id='8865' href='9987-653-655-0-0-8865-0-0-0-0-1-1-1-1-1-72-4137-33.html' >500-999</a></div><div rel='0'><a id='8864' href='9987-653-655-0-0-8864-0-0-0-0-1-1-1-1-1-72-4137-33.html' >1-499</a></div></dd></dl>
+<dl >
+<dt>特点：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='59754' href='9987-653-655-0-0-0-59754-0-0-0-1-1-1-1-1-72-4137-33.html' >“0”元购机</a></div><div rel='0'><a id='463408' href='9987-653-655-0-0-0-463408-0-0-0-1-1-1-1-1-72-4137-33.html' >防水</a></div><div rel='0'><a id='13765' href='9987-653-655-0-0-0-13765-0-0-0-1-1-1-1-1-72-4137-33.html' >拍照神器</a></div><div rel='0'><a id='57050' href='9987-653-655-0-0-0-57050-0-0-0-1-1-1-1-1-72-4137-33.html' >老人手机</a></div><div rel='0'><a id='502841' href='9987-653-655-0-0-0-502841-0-0-0-1-1-1-1-1-72-4137-33.html' >美颜自拍</a></div><div rel='0'><a id='57051' href='9987-653-655-0-0-0-57051-0-0-0-1-1-1-1-1-72-4137-33.html' >儿童手机</a></div><div rel='0'><a id='190277' href='9987-653-655-0-0-0-190277-0-0-0-1-1-1-1-1-72-4137-33.html' >翻盖</a></div><div rel='0'><a id='190279' href='9987-653-655-0-0-0-190279-0-0-0-1-1-1-1-1-72-4137-33.html' >直板键盘</a></div><div rel='0'><a id='502864' href='9987-653-655-0-0-0-502864-0-0-0-1-1-1-1-1-72-4137-33.html' >1080P全高清屏</a></div><div rel='0'><a id='502868' href='9987-653-655-0-0-0-502868-0-0-0-1-1-1-1-1-72-4137-33.html' >支持NFC</a></div><div rel='0'><a id='502880' href='9987-653-655-0-0-0-502880-0-0-0-1-1-1-1-1-72-4137-33.html' >长待机</a></div></dd></dl>
+<dl >
+<dt>屏幕尺寸：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='503075' href='9987-653-655-0-0-0-0-503075-0-0-1-1-1-1-1-72-4137-33.html' >5.6英寸及以上</a></div><div rel='0'><a id='190299' href='9987-653-655-0-0-0-0-190299-0-0-1-1-1-1-1-72-4137-33.html' >5.5-5.0英寸</a></div><div rel='0'><a id='190298' href='9987-653-655-0-0-0-0-190298-0-0-1-1-1-1-1-72-4137-33.html' >4.9-4.1英寸</a></div><div rel='0'><a id='190297' href='9987-653-655-0-0-0-0-190297-0-0-1-1-1-1-1-72-4137-33.html' >4.0-3.1英寸</a></div><div rel='0'><a id='190294' href='9987-653-655-0-0-0-0-190294-0-0-1-1-1-1-1-72-4137-33.html' >3.0英寸及以下</a></div></dd></dl>
+<dl >
+<dt>系统：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='13756' href='9987-653-655-0-0-0-0-0-13756-0-1-1-1-1-1-72-4137-33.html' >安卓（Android）</a></div><div rel='0'><a id='114599' href='9987-653-655-0-0-0-0-0-114599-0-1-1-1-1-1-72-4137-33.html' >微软（WindowsPhone）</a></div><div rel='0'><a id='13757' href='9987-653-655-0-0-0-0-0-13757-0-1-1-1-1-1-72-4137-33.html' >苹果（IOS）</a></div><div rel='0'><a id='57045' href='9987-653-655-0-0-0-0-0-57045-0-1-1-1-1-1-72-4137-33.html' >其它</a></div></dd></dl>
+<dl >
+<dt>机身颜色：</dt><dd><div rel='0'><a id='0' href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='curr'>不限</a></div>
+<div rel='0'><a id='503133' href='9987-653-655-0-0-0-0-0-0-503133-1-1-1-1-1-72-4137-33.html' >白色</a></div><div rel='0'><a id='503134' href='9987-653-655-0-0-0-0-0-0-503134-1-1-1-1-1-72-4137-33.html' >黑色</a></div><div rel='0'><a id='503135' href='9987-653-655-0-0-0-0-0-0-503135-1-1-1-1-1-72-4137-33.html' >灰色</a></div><div rel='0'><a id='503136' href='9987-653-655-0-0-0-0-0-0-503136-1-1-1-1-1-72-4137-33.html' >金色</a></div><div rel='0'><a id='503138' href='9987-653-655-0-0-0-0-0-0-503138-1-1-1-1-1-72-4137-33.html' >红色</a></div><div rel='0'><a id='503140' href='9987-653-655-0-0-0-0-0-0-503140-1-1-1-1-1-72-4137-33.html' >蓝色</a></div><div rel='0'><a id='503141' href='9987-653-655-0-0-0-0-0-0-503141-1-1-1-1-1-72-4137-33.html' >粉色</a></div><div rel='0'><a id='503143' href='9987-653-655-0-0-0-0-0-0-503143-1-1-1-1-1-72-4137-33.html' >黄色</a></div><div rel='0'><a id='503145' href='9987-653-655-0-0-0-0-0-0-503145-1-1-1-1-1-72-4137-33.html' >绿色</a></div><div rel='0'><a id='503146' href='9987-653-655-0-0-0-0-0-0-503146-1-1-1-1-1-72-4137-33.html' >橙色</a></div><div rel='0'><a id='503149' href='9987-653-655-0-0-0-0-0-0-503149-1-1-1-1-1-72-4137-33.html' >紫色</a></div><div rel='0'><a id='503152' href='9987-653-655-0-0-0-0-0-0-503152-1-1-1-1-1-72-4137-33.html' >其它</a></div></dd></dl>
+</div><!--select end -->
+<script type="text/javascript">(function() { var b = $("#select-brand .tab"), f = $("#select-brand .content"), h = $("#select-hold"), c = b.find(".curr").attr("rel"), g = "126px", a; var d = 0, i = 0, e = (screen.width >= 1200) ? 6 : 5; i = Math.ceil(f.children().size() / e); d = (f.children().outerHeight()) * i; if (d > parseInt(g)) { f.css("height", g); h.html("<b></b>展开").attr("class", "close") } else { h.html("<b></b>收起").attr("class", "open") } h.bind("click", function() { if ($(this).attr("class") != "open") { f.css("height", "auto"); h.html("<b></b>收起").attr("class", "open") } else { f.css("height", g); h.html("<b></b>展开").attr("class", "close") } }); b.find("li").bind("mouseover", function() { var j = $(this); a = setTimeout(function() { if (j.attr("rel") == c) { return } b.find("li").eq(c).removeClass("curr"); j.addClass("curr"); c = j.attr("rel"); f.css("height", "auto"); h.hide(); f.find("div").each(function() { if (c == 0) { $(this).show() } else { $(this).hide(); if ($(this).attr("rel") == c) { $(this).show() } } }) }, 500) }).bind("mouseout", function() { clearTimeout(a) }) })();</script><div id='advanced'><div><a href='http://www.jd.com/plistSearch.aspx?sort0=9987&sort1=653&sort2=655'>高级搜索</a><b></b></div></div>
+<div id='filter'  clstag='thirdtype|keycount|thirdtype|filter'>
+<div class='fore1'>
+<dl class='order'><dt>排序：</dt>
+<dd class='curr' ><a href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html'>销量</a><b></b></dd>
+<dd><b></b><a href='9987-653-655-0-0-0-0-0-0-0-1-3-1-1-1-72-4137-33.html' rel='nofollow'>价格</a><b></b></dd>
+<dd><a href='9987-653-655-0-0-0-0-0-0-0-1-4-1-1-1-72-4137-33.html' rel='nofollow'>评论数</a><b></b></dd>
+<dd><a href='9987-653-655-0-0-0-0-0-0-0-1-5-1-1-1-72-4137-33.html' rel='nofollow'>上架时间</a><b></b></dd>
+</dl>
+<div class='pagin pagin-m'><span class='text'><i>1</i>/52</span>
+<span class="prev-disabled">上一页<b></b></span>
+<a class="next" href="9987-653-655-0-0-0-0-0-0-0-1-1-2-1-1-72-4137-33.html">下一页<b></b></a>
+</div>
+<div class='total'><span>共<strong>1841</strong>个商品</span></div>
+<span class='clr'></span>
+</div>
+<div class='fore2 form'>
+<dl class='store'>
+<dt>库存：</dt>
+<dd id='store-selector'>
+<div class='text'>请选择<b></b></div>
+<div class='content'>
+<div data-widget='tabs' class='m JD-stock' id='JD-stock'>
+<div class='mt'>
+<ul class='tab'>
+<li class='curr' onClick='selectStoreTab(0)' data-widget='tab-item'><a href='#none'><em>请选择</em><i></i></a></li>
+<li class='hide' onClick='selectStoreTab(1)' data-widget='tab-item' ><a href='#none'><em>请选择</em><i></i></a></li>
+<li class='hide' onClick='selectStoreTab(2)' data-widget='tab-item' ><a href='#none'><em>请选择</em><i></i></a></li>
+</ul>
+<div class='stock-line'></div>
+</div>
+<div class='mc' data-area='0' data-widget='tab-content'>
+<ul class='area-list'>
+</ul>
+</div>
+<div class='mc hide' data-area='1' data-widget='tab-content' >
+<ul class='area-list'>
+</ul>
+<p class='ac'>请选择一级地区...</p>
+</div>
+<div class='mc hide' data-area='2' data-widget='tab-content' >
+<ul class='area-list'>
+</ul>
+<p class='ac'>请选择二级地区...</p>
+</div>
+</div>
+</div>
+<div onclick="$('#store-selector').removeClass('hover')" class='close'></div>
+</dd>
+<dd class='instock'><div class='selected'><a href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-0.html'><b></b>仅显示有货</a></div></dd>
+</dl>
+<dl class='type'>
+<dt>商品类型：</dt>
+<dd class='selected'><a href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html'><b></b>全部</a></dd>
+<dd><a href='9987-653-655-0-0-0-0-0-0-0-4-1-1-1-1-72-4137-33.html'><b></b>京东配送</a></dd>
+<dd><a href='9987-653-655-0-0-0-0-0-0-0-3-1-1-1-1-72-4137-33.html'><b></b>第三方配送</a></dd>
+</dl>
+<span class='clr'></span>
+</div>
+</div>
+<div class="m plist-n7a" id="plist" clstag="thirdtype|keycount|thirdtype|plist">
+<ul class="list-h">
+<li index='0' onclick='log(7,3,539349)' sku='539349'><div class='p-img'><a target='_blank'  href='http://item.jd.com/539349.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 4 8G版 3G手机（白色）WCDMA/GSM' src='http://img14.360buyimg.com/n7/3372/9a2815da-934d-4aaf-8be9-c57a8e9b832a.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/539349.html'>苹果（APPLE）iPhone 4 8G版 3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='539349'></font></a></div><div id='djd539349' class='p-price'><strong></strong><span id='p539349'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/539349-1-1.html'>已有46779人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,539349)' href='http://gate.jd.com/InitCart.aspx?pid=539349&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll539349' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_539349' skuid='539349'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='1' onclick='log(7,3,539348)' sku='539348'><div class='p-img'><a target='_blank'  href='http://item.jd.com/539348.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 4 8G版 3G手机（黑色）WCDMA/GSM' src='http://img13.360buyimg.com/n7/2379/4d301036-ebc0-4a74-a341-b96591dd0e36.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/539348.html'>苹果（APPLE）iPhone 4 8G版 3G手机（黑色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='539348'></font></a></div><div id='djd539348' class='p-price'><strong></strong><span id='p539348'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/539348-1-1.html'>已有39565人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,539348)' href='http://gate.jd.com/InitCart.aspx?pid=539348&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll539348' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_539348' skuid='539348'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='2' onclick='log(7,3,959495)' sku='959495'><div class='p-img'><a target='_blank'  href='http://item.jd.com/959495.html'><img width='220' height='220' alt='华为 荣耀3 outdoor 3G手机（白色）WCDMA/GSM' src='http://img10.360buyimg.com/n7/g15/M00/09/12/rBEhWVIu0bsIAAAAAAD4z2MILVMAADAEwP-6ewAAPjn572.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/959495.html'>华为 荣耀3 outdoor 3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='959495'></font></a></div><div id='djd959495' class='p-price'><strong></strong><span id='p959495'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/959495-1-1.html'>已有8017人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,959495)' href='http://gate.jd.com/InitCart.aspx?pid=959495&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll959495' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_959495' skuid='959495'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='3' onclick='log(7,3,862534)' sku='862534'><div class='p-img'><a target='_blank'  href='http://item.jd.com/862534.html'><img width='220' height='220' alt='三星（SAMSUNG）Galaxy S4 I9508 3G手机（皓月白）TD-SCDMA/GSM ' src='http://img14.360buyimg.com/n7/g10/M00/15/18/rBEQWFFtJ_8IAAAAAAGmlCVzO54AAEQPgOzhpIAAaas207.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/862534.html'>三星（SAMSUNG）Galaxy S4 I9508 3G手机（皓月白）TD-SCDMA/GSM <font style='color: #ff0000' class='adwords' name='862534'></font></a></div><div id='djd862534' class='p-price'><strong></strong><span id='p862534'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/862534-1-1.html'>已有7898人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,862534)' href='http://gate.jd.com/InitCart.aspx?pid=862534&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll862534' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_862534' skuid='862534'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='4' onclick='log(7,3,647812)' sku='647812'><div class='p-img'><a target='_blank'  href='http://item.jd.com/647812.html'><img width='220' height='220' alt='三星 Galaxy SIII I9300 3G手机（云石白）WCDMA/GSM' src='http://img12.360buyimg.com/n7/g5/M02/00/19/rBEIC0-_J5AIAAAAAAFXNd_SpUEAAAJ_wBRAXYAAVdN166.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/647812.html'>三星 Galaxy SIII I9300 3G手机（云石白）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='647812'></font></a></div><div id='djd647812' class='p-price'><strong></strong><span id='p647812'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/647812-1-1.html'>已有20821人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,647812)' href='http://gate.jd.com/InitCart.aspx?pid=647812&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll647812' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_647812' skuid='647812'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='5' onclick='log(7,3,738388)' sku='738388'><div class='p-img'><a target='_blank'  href='http://item.jd.com/738388.html'><img width='220' height='220' alt='三星 Galaxy Note II N7100 3G手机（云石白）WCDMA/GSM' src='http://img13.360buyimg.com/n7/g7/M03/08/0C/rBEHZVBzltoIAAAAAAEnQsBllDEAABo-ADFP9kAASda345.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/738388.html'>三星 Galaxy Note II N7100 3G手机（云石白）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='738388'></font></a></div><div id='djd738388' class='p-price'><strong></strong><span id='p738388'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/738388-1-1.html'>已有13096人评价</a></span><span class='reputation'>(95%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,738388)' href='http://gate.jd.com/InitCart.aspx?pid=738388&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll738388' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_738388' skuid='738388'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='6' onclick='log(7,3,916185)' sku='916185'><div class='p-img'><a target='_blank'  href='http://item.jd.com/916185.html'><img width='220' height='220' alt='华为 G610-T00 3G手机（白）TD-SCDMA/GSM 双卡双待' src='http://img10.360buyimg.com/n7/g13/M02/01/1E/rBEhVFHCy5IIAAAAAAGZZWWDMrgAAAYeQP8oqAAAZl9106.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/916185.html'>华为 G610-T00 3G手机（白）TD-SCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='916185'></font></a></div><div id='djd916185' class='p-price'><strong></strong><span id='p916185'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/916185-1-1.html'>已有9073人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,916185)' href='http://gate.jd.com/InitCart.aspx?pid=916185&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll916185' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_916185' skuid='916185'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='7' onclick='log(7,3,656206)' sku='656206'><div class='p-img'><a target='_blank'  href='http://item.jd.com/656206.html'><img width='220' height='220' alt='三星（SAMSUNG）Galaxy S3 I9308 3G手机 (云石白) TD-SCDMA/GSM' src='http://img11.360buyimg.com/n7/g5/M02/00/19/rBEIC0-_J5AIAAAAAAFXNd_SpUEAAAJ_wBRAXYAAVdN166.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/656206.html'>三星（SAMSUNG）Galaxy S3 I9308 3G手机 (云石白) TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='656206'></font></a></div><div id='djd656206' class='p-price'><strong></strong><span id='p656206'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/656206-1-1.html'>已有25803人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,656206)' href='http://gate.jd.com/InitCart.aspx?pid=656206&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll656206' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_656206' skuid='656206'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='8' onclick='log(7,3,976084)' sku='976084'><div class='p-img'><a target='_blank'  href='http://item.jd.com/976084.html'><img width='220' height='220' alt='魅族 MX3 32G 3G手机（前黑后白） WCDMA/GSM ' data-lazyload='http://img14.360buyimg.com/n7/g15/M0A/08/1C/rBEhWVIpglUIAAAAAADdzehD6kkAAC3egOW_H4AAN3l596.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/976084.html'>魅族 MX3 32G 3G手机（前黑后白） WCDMA/GSM <font style='color: #ff0000' class='adwords' name='976084'></font></a></div><div id='djd976084' class='p-price'><strong></strong><span id='p976084'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/976084-1-1.html'>已有836人评价</a></span><span class='reputation'>(86%好评)</span></div><div class='stocklist'><span class='st36'>北京预订</span></div><div class='btns'><a onclick='log(1,7,976084)' href='http://gate.jd.com/InitCart.aspx?pid=976084&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll976084' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_976084' skuid='976084'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='9' onclick='log(7,3,974077)' sku='974077'><div class='p-img'><a target='_blank'  href='http://item.jd.com/974077.html'><img width='220' height='220' alt='三星（SAMSUNG）Galaxy Note 3 N9008 3G手机（简约白）TD-SCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g14/M04/13/05/rBEhVVJJSiYIAAAAAAGP9a30gNIAADvxwLalWgAAZAN345.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/974077.html'>三星（SAMSUNG）Galaxy Note 3 N9008 3G手机（简约白）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='974077'></font></a></div><div id='djd974077' class='p-price'><strong></strong><span id='p974077'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/974077-1-1.html'>已有570人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,974077)' href='http://gate.jd.com/InitCart.aspx?pid=974077&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll974077' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_974077' skuid='974077'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='10' onclick='log(7,3,920572)' sku='920572'><div class='p-img'><a target='_blank'  href='http://item.jd.com/920572.html'><img width='220' height='220' alt='三星（SAMSUNG）I9158 3G手机（白色）TD-SCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g14/M04/03/06/rBEhVlHNWTgIAAAAAAHSH2rfKRYAAAoCAFmqZIAAdI3805.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/920572.html'>三星（SAMSUNG）I9158 3G手机（白色）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='920572'></font></a></div><div id='djd920572' class='p-price'><strong></strong><span id='p920572'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/920572-1-1.html'>已有2573人评价</a></span><span class='reputation'>(91%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,920572)' href='http://gate.jd.com/InitCart.aspx?pid=920572&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll920572' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_920572' skuid='920572'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='11' onclick='log(7,3,570129)' sku='570129'><div class='p-img'><a target='_blank'  href='http://item.jd.com/570129.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 4S 16G版 3G手机（白色）WCDMA/GSM' data-lazyload='http://img14.360buyimg.com/n7/858/3ebc8f60-b924-4d1b-af32-b4ac2f8408cf.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/570129.html'>苹果（APPLE）iPhone 4S 16G版 3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='570129'></font></a></div><div id='djd570129' class='p-price'><strong></strong><span id='p570129'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/570129-1-1.html'>已有16429人评价</a></span><span class='reputation'>(96%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,570129)' href='http://gate.jd.com/InitCart.aspx?pid=570129&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll570129' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_570129' skuid='570129'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='12' onclick='log(7,3,764901)' sku='764901'><div class='p-img'><a target='_blank'  href='http://item.jd.com/764901.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 5 16G版 3G手机（黑色）WCDMA/GSM' data-lazyload='http://img11.360buyimg.com/n7/g7/M00/0F/19/rBEHZVC4csEIAAAAAAFpqVHm-98AADFiQDDkrgAAWnB245.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/764901.html'>苹果（APPLE）iPhone 5 16G版 3G手机（黑色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='764901'></font></a></div><div id='djd764901' class='p-price'><strong></strong><span id='p764901'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/764901-1-1.html'>已有19757人评价</a></span><span class='reputation'>(96%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,764901)' href='http://gate.jd.com/InitCart.aspx?pid=764901&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll764901' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_764901' skuid='764901'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='13' onclick='log(7,3,760695)' sku='760695'><div class='p-img'><a target='_blank'  href='http://item.jd.com/760695.html'><img width='220' height='220' alt='三星（SAMSUNG）Galaxy Note II N7108 3G手机（云石白）TD-SCDMA/GSM' data-lazyload='http://img10.360buyimg.com/n7/g7/M03/08/0C/rBEHZVBzltoIAAAAAAEnQsBllDEAABo-ADFP9kAASda345.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/760695.html'>三星（SAMSUNG）Galaxy Note II N7108 3G手机（云石白）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='760695'></font></a></div><div id='djd760695' class='p-price'><strong></strong><span id='p760695'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/760695-1-1.html'>已有16082人评价</a></span><span class='reputation'>(95%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,760695)' href='http://gate.jd.com/InitCart.aspx?pid=760695&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll760695' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_760695' skuid='760695'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='14' onclick='log(7,3,841933)' sku='841933'><div class='p-img'><a target='_blank'  href='http://item.jd.com/841933.html'><img width='220' height='220' alt='联想（Lenovo）A820T 3G手机（深邃黑）TD-SCDMA/GSM 双卡双待' data-lazyload='http://img13.360buyimg.com/n7/g13/M02/01/15/rBEhVFHAHF4IAAAAAAHCfN9YoyoAAAUuABGlyoAAcKU322.jpg' data-img="1"/></a><div class='picon pi8'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/841933.html'>联想（Lenovo）A820T 3G手机（深邃黑）TD-SCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='841933'></font></a></div><div id='djd841933' class='p-price'><strong></strong><span id='p841933'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/841933-1-1.html'>已有21727人评价</a></span><span class='reputation'>(91%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,841933)' href='http://gate.jd.com/InitCart.aspx?pid=841933&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll841933' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_841933' skuid='841933'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='15' onclick='log(7,3,855739)' sku='855739'><div class='p-img'><a target='_blank'  href='http://item.jd.com/855739.html'><img width='220' height='220' alt='三星 Galaxy S4 I9500 16G版 3G手机（皓月白）WCDMA/GSM' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/1A/07/rBEQWFF7cvEIAAAAAAGNdmPTu-kAAFH1gOd3r8AAY2O275.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/855739.html'>三星 Galaxy S4 I9500 16G版 3G手机（皓月白）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='855739'></font></a></div><div id='djd855739' class='p-price'><strong></strong><span id='p855739'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/855739-1-1.html'>已有5030人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,855739)' href='http://gate.jd.com/InitCart.aspx?pid=855739&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll855739' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_855739' skuid='855739'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='16' onclick='log(7,3,791109)' sku='791109'><div class='p-img'><a target='_blank'  href='http://item.jd.com/791109.html'><img width='220' height='220' alt='三星（SAMSUNG）S7568 3G手机（白色）TD-SCDMA/GSM' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/00/0B/rBEQWVD_QgcIAAAAAAF2-xQvuAIAAAEmgHVDWMAAXcT296.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/791109.html'>三星（SAMSUNG）S7568 3G手机（白色）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='791109'></font></a></div><div id='djd791109' class='p-price'><strong></strong><span id='p791109'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/791109-1-1.html'>已有26017人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,791109)' href='http://gate.jd.com/InitCart.aspx?pid=791109&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll791109' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_791109' skuid='791109'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='17' onclick='log(7,3,863619)' sku='863619'><div class='p-img'><a target='_blank'  href='http://item.jd.com/863619.html'><img width='220' height='220' alt='三星 Galaxy S4 I959 电信3G手机（皓月白）CDMA2000/GSM 双模双待双通' data-lazyload='http://img14.360buyimg.com/n7/g10/M00/15/18/rBEQWFFtKC8IAAAAAAGmlCVzO54AAEQPwHvHhMAAaas403.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/863619.html'>三星 Galaxy S4 I959 电信3G手机（皓月白）CDMA2000/GSM 双模双待双通<font style='color: #ff0000' class='adwords' name='863619'></font></a></div><div id='djd863619' class='p-price'><strong></strong><span id='p863619'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/863619-1-1.html'>已有3082人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,863619)' href='http://gate.jd.com/InitCart.aspx?pid=863619&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll863619' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_863619' skuid='863619'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='18' onclick='log(7,3,932144)' sku='932144'><div class='p-img'><a target='_blank'  href='http://item.jd.com/932144.html'><img width='220' height='220' alt='华为 G700-U00 3G手机（黑）WCDMA/GSM 双卡双待' data-lazyload='http://img14.360buyimg.com/n7/g15/M08/04/1F/rBEhWlINgTcIAAAAAAHCs7haB0oAACGrAEz-DoAAcLL839.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/932144.html'>华为 G700-U00 3G手机（黑）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='932144'></font></a></div><div id='djd932144' class='p-price'><strong></strong><span id='p932144'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/932144-1-1.html'>已有4901人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,932144)' href='http://gate.jd.com/InitCart.aspx?pid=932144&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll932144' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_932144' skuid='932144'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='19' onclick='log(7,3,907424)' sku='907424'><div class='p-img'><a target='_blank'  href='http://item.jd.com/907424.html'><img width='220' height='220' alt='华为 G700-U00 3G手机（前黑后白）WCDMA/GSM 双卡双待' data-lazyload='http://img14.360buyimg.com/n7/g14/M05/00/05/rBEhV1GwZ5QIAAAAAAG3IbLB4kkAAACNwJ8ZosAAbc5749.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/907424.html'>华为 G700-U00 3G手机（前黑后白）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='907424'></font></a></div><div id='djd907424' class='p-price'><strong></strong><span id='p907424'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/907424-1-1.html'>已有7092人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,907424)' href='http://gate.jd.com/InitCart.aspx?pid=907424&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll907424' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_907424' skuid='907424'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='20' onclick='log(7,3,858025)' sku='858025'><div class='p-img'><a target='_blank'  href='http://item.jd.com/858025.html'><img width='220' height='220' alt='三星 I8552 3G手机（白色）WCDMA/GSM 双卡双待' data-lazyload='http://img10.360buyimg.com/n7/g10/M00/13/11/rBEQWFFlIdcIAAAAAAFsL7B4gbIAAD0bwH9jSMAAWxH877.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/858025.html'>三星 I8552 3G手机（白色）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='858025'></font></a></div><div id='djd858025' class='p-price'><strong></strong><span id='p858025'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/858025-1-1.html'>已有5364人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,858025)' href='http://gate.jd.com/InitCart.aspx?pid=858025&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll858025' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_858025' skuid='858025'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='21' onclick='log(7,3,834827)' sku='834827'><div class='p-img'><a target='_blank'  href='http://item.jd.com/834827.html'><img width='220' height='220' alt='华为 G520 3G手机（黑色）WCDMA/GSM 双卡双待' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/0A/1E/rBEQWVFCfkQIAAAAAAE23MGSA1UAACI0QFAu0QAATb0851.jpg' data-img="1"/></a><div class='picon pi3'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/834827.html'>华为 G520 3G手机（黑色）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='834827'></font></a></div><div id='djd834827' class='p-price'><strong></strong><span id='p834827'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/834827-1-1.html'>已有8827人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,834827)' href='http://gate.jd.com/InitCart.aspx?pid=834827&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll834827' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_834827' skuid='834827'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='22' onclick='log(7,3,980682)' sku='980682'><div class='p-img'><a target='_blank'  href='http://item.jd.com/980682.html'><img width='220' height='220' alt='三星（SAMSUNG）Galaxy Note 3 N9008 3G手机（炫酷黑）TD-SCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g14/M03/13/05/rBEhVlJJSesIAAAAAAGR_I3PrgoAADvxgKio2QAAZIU813.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/980682.html'>三星（SAMSUNG）Galaxy Note 3 N9008 3G手机（炫酷黑）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='980682'></font></a></div><div id='djd980682' class='p-price'><strong></strong><span id='p980682'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/980682-1-1.html'>已有297人评价</a></span><span class='reputation'>(96%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,980682)' href='http://gate.jd.com/InitCart.aspx?pid=980682&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll980682' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_980682' skuid='980682'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='23' onclick='log(7,3,877539)' sku='877539'><div class='p-img'><a target='_blank'  href='http://item.jd.com/877539.html'><img width='220' height='220' alt='中兴 V967s 3G手机（蓝色）WCDMA/GSM 双卡双待' data-lazyload='http://img14.360buyimg.com/n7/g12/M00/03/11/rBEQYFGK_uEIAAAAAAFbwKEfCCsAAAsZgLqCYAAAVvY192.jpg' data-img="1"/></a><div class='picon pi2'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/877539.html'>中兴 V967s 3G手机（蓝色）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='877539'></font></a></div><div id='djd877539' class='p-price'><strong></strong><span id='p877539'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/877539-1-1.html'>已有7257人评价</a></span><span class='reputation'>(87%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,877539)' href='http://gate.jd.com/InitCart.aspx?pid=877539&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll877539' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_877539' skuid='877539'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='24' onclick='log(7,3,826212)' sku='826212'><div class='p-img'><a target='_blank'  href='http://item.jd.com/826212.html'><img width='220' height='220' alt='三星（SAMSUNG）I8268 3G手机（时尚白）TD-SCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/16/0B/rBEQWVFvSZEIAAAAAAFL0dFQ2XgAAEXjQCM3rEAAUvp415.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/826212.html'>三星（SAMSUNG）I8268 3G手机（时尚白）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='826212'></font></a></div><div id='djd826212' class='p-price'><strong></strong><span id='p826212'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/826212-1-1.html'>已有5436人评价</a></span><span class='reputation'>(89%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,826212)' href='http://gate.jd.com/InitCart.aspx?pid=826212&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll826212' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_826212' skuid='826212'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='25' onclick='log(7,3,862538)' sku='862538'><div class='p-img'><a target='_blank'  href='http://item.jd.com/862538.html'><img width='220' height='220' alt='三星 Galaxy S4 I9508 3G手机（星空黑）TD-SCDMA/GSM ' data-lazyload='http://img13.360buyimg.com/n7/g10/M00/15/19/rBEQWVFtM1EIAAAAAAG4VXyqhUUAAEQeQD4_VgAAbht636.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/862538.html'>三星 Galaxy S4 I9508 3G手机（星空黑）TD-SCDMA/GSM <font style='color: #ff0000' class='adwords' name='862538'></font></a></div><div id='djd862538' class='p-price'><strong></strong><span id='p862538'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/862538-1-1.html'>已有2916人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,862538)' href='http://gate.jd.com/InitCart.aspx?pid=862538&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll862538' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_862538' skuid='862538'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='26' onclick='log(7,3,971489)' sku='971489'><div class='p-img'><a target='_blank'  href='http://item.jd.com/971489.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 5c 16G版 3G手机（白色）WCDMA/GSM' data-lazyload='http://img14.360buyimg.com/n7/g15/M02/09/1E/rBEhWlIxaUAIAAAAAAF4SROIKlcAADE7gKLZMUAAXhh776.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/971489.html'>苹果（APPLE）iPhone 5c 16G版 3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='971489'></font></a></div><div id='djd971489' class='p-price'><strong></strong><span id='p971489'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/971489-1-1.html'>已有369人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,971489)' href='http://gate.jd.com/InitCart.aspx?pid=971489&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll971489' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_971489' skuid='971489'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='27' onclick='log(7,3,771439)' sku='771439'><div class='p-img'><a target='_blank'  href='http://item.jd.com/771439.html'><img width='220' height='220' alt='中兴（ZTE）小旋风 四核 U950 3G手机（珠光蓝）TD-SCDMA/GSM' data-lazyload='http://img14.360buyimg.com/n7/g7/M03/10/05/rBEHZVDAWCsIAAAAAAHGZ2hsrt8AADKMgENQ1kAAcZ_091.jpg' data-img="1"/></a><div class='picon pi7'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/771439.html'>中兴（ZTE）小旋风 四核 U950 3G手机（珠光蓝）TD-SCDMA/GSM<font style='color: #ff0000' class='adwords' name='771439'></font></a></div><div id='djd771439' class='p-price'><strong></strong><span id='p771439'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/771439-1-1.html'>已有14989人评价</a></span><span class='reputation'>(85%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,771439)' href='http://gate.jd.com/InitCart.aspx?pid=771439&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll771439' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_771439' skuid='771439'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='28' onclick='log(7,3,970602)' sku='970602'><div class='p-img'><a target='_blank'  href='http://item.jd.com/970602.html'><img width='220' height='220' alt='LG G2（D802）3G手机（白色）WCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g15/M03/09/0C/rBEhWlItogQIAAAAAAF_BAALNrQAAC9-wPgbCgAAX8c352.jpg' data-img="1"/></a><div class='picon pi6'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/970602.html'>LG G2（D802）3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='970602'></font></a></div><div id='djd970602' class='p-price'><strong></strong><span id='p970602'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/970602-1-1.html'>已有1695人评价</a></span><span class='reputation'>(98%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,970602)' href='http://gate.jd.com/InitCart.aspx?pid=970602&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll970602' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_970602' skuid='970602'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='29' onclick='log(7,3,772064)' sku='772064'><div class='p-img'><a target='_blank'  href='http://item.jd.com/772064.html'><img width='220' height='220' alt='三星 Galaxy Note II N7102 32G版 3G手机（云石白）WCDMA/GSM 双卡双待双通' data-lazyload='http://img14.360buyimg.com/n7/g7/M03/0E/10/rBEHZlCl6hsIAAAAAAEkZQr0ue4AAC1YgKZAqMAASR9603.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/772064.html'>三星 Galaxy Note II N7102 32G版 3G手机（云石白）WCDMA/GSM 双卡双待双通<font style='color: #ff0000' class='adwords' name='772064'></font></a></div><div id='djd772064' class='p-price'><strong></strong><span id='p772064'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/772064-1-1.html'>已有5405人评价</a></span><span class='reputation'>(94%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,772064)' href='http://gate.jd.com/InitCart.aspx?pid=772064&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll772064' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_772064' skuid='772064'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='30' onclick='log(7,3,722416)' sku='722416'><div class='p-img'><a target='_blank'  href='http://item.jd.com/722416.html'><img width='220' height='220' alt='三星 S7562 3G手机（纯白）WCDMA/GSM 双卡双待' data-lazyload='http://img11.360buyimg.com/n7/g7/M03/07/0B/rBEHZVBa8i8IAAAAAAGt-oiRtG8AABb0gARmPoAAa4S471.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/722416.html'>三星 S7562 3G手机（纯白）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='722416'></font></a></div><div id='djd722416' class='p-price'><strong></strong><span id='p722416'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/722416-1-1.html'>已有22385人评价</a></span><span class='reputation'>(91%好评)</span></div><div class='stocklist'><span class='st36'>北京预订</span></div><div class='btns'><a onclick='log(1,7,722416)' href='http://gate.jd.com/InitCart.aspx?pid=722416&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll722416' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_722416' skuid='722416'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='31' onclick='log(7,3,973861)' sku='973861'><div class='p-img'><a target='_blank'  href='http://item.jd.com/973861.html'><img width='220' height='220' alt='三星 Galaxy Note3 N9009 电信3G手机（简约白）CDMA2000/GSM 双模双待' data-lazyload='http://img11.360buyimg.com/n7/g13/M00/0A/13/rBEhUlItpgQIAAAAAAKy8UM3fHkAAC9xwCH7S4AArMJ954.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/973861.html'>三星 Galaxy Note3 N9009 电信3G手机（简约白）CDMA2000/GSM 双模双待<font style='color: #ff0000' class='adwords' name='973861'></font></a></div><div id='djd973861' class='p-price'><strong></strong><span id='p973861'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/973861-1-1.html'>已有145人评价</a></span><span class='reputation'>(95%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,973861)' href='http://gate.jd.com/InitCart.aspx?pid=973861&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll973861' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_973861' skuid='973861'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='32' onclick='log(7,3,816450)' sku='816450'><div class='p-img'><a target='_blank'  href='http://item.jd.com/816450.html'><img width='220' height='220' alt='三星 S7572 3G手机（白色）WCDMA/GSM 双卡双待' data-lazyload='http://img10.360buyimg.com/n7/g10/M00/09/16/rBEQWFE9mrkIAAAAAAGOYUUaJh8AAB5UgNMX20AAY55710.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/816450.html'>三星 S7572 3G手机（白色）WCDMA/GSM 双卡双待<font style='color: #ff0000' class='adwords' name='816450'></font></a></div><div id='djd816450' class='p-price'><strong></strong><span id='p816450'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/816450-1-1.html'>已有11915人评价</a></span><span class='reputation'>(92%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,816450)' href='http://gate.jd.com/InitCart.aspx?pid=816450&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll816450' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_816450' skuid='816450'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='33' onclick='log(7,3,981821)' sku='981821'><div class='p-img'><a target='_blank'  href='http://item.jd.com/981821.html'><img width='220' height='220' alt='苹果（APPLE）iPhone 4S 8G版 3G手机（白色）WCDMA/GSM' data-lazyload='http://img11.360buyimg.com/n7/858/3ebc8f60-b924-4d1b-af32-b4ac2f8408cf.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/981821.html'>苹果（APPLE）iPhone 4S 8G版 3G手机（白色）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='981821'></font></a></div><div id='djd981821' class='p-price'><strong></strong><span id='p981821'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/981821-1-1.html'>已有357人评价</a></span><span class='reputation'>(90%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,981821)' href='http://gate.jd.com/InitCart.aspx?pid=981821&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll981821' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_981821' skuid='981821'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='34' onclick='log(7,3,763267)' sku='763267'><div class='p-img'><a target='_blank'  href='http://item.jd.com/763267.html'><img width='220' height='220' alt='三星 GALAXY Note II N719 电信3G手机（云石白）CDMA2000/GSM 双模双待双通' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/08/11/rBEQWVE4Qy8IAAAAAAHFXmJV34EAABq8gA7-DAAAcV2658.jpg' data-img="1"/></a></div><div class='p-name'><a target='_blank' href='http://item.jd.com/763267.html'>三星 GALAXY Note II N719 电信3G手机（云石白）CDMA2000/GSM 双模双待双通<font style='color: #ff0000' class='adwords' name='763267'></font></a></div><div id='djd763267' class='p-price'><strong></strong><span id='p763267'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/763267-1-1.html'>已有3423人评价</a></span><span class='reputation'>(95%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,763267)' href='http://gate.jd.com/InitCart.aspx?pid=763267&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll763267' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_763267' skuid='763267'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+<li index='35' onclick='log(7,3,891287)' sku='891287'><div class='p-img'><a target='_blank'  href='http://item.jd.com/891287.html'><img width='220' height='220' alt='华为 Mate 3G手机（皓月白）WCDMA/GSM' data-lazyload='http://img12.360buyimg.com/n7/g10/M00/13/1F/rBEQWVFmd1wIAAAAAAIKW-sNsnYAAD5wgBpPhIAAgpz874.jpg' data-img="1"/></a><div class='picon pi3'><b></b></div></div><div class='p-name'><a target='_blank' href='http://item.jd.com/891287.html'>华为 Mate 3G手机（皓月白）WCDMA/GSM<font style='color: #ff0000' class='adwords' name='891287'></font></a></div><div id='djd891287' class='p-price'><strong></strong><span id='p891287'></span></div><div class='extra'><span class='evaluate'><a target='_blank' href='http://club.jd.com/review/891287-1-1.html'>已有1821人评价</a></span><span class='reputation'>(93%好评)</span></div><div class='stocklist'><span class='st33'>北京有货</span></div><div class='btns'><a onclick='log(1,7,891287)' href='http://gate.jd.com/InitCart.aspx?pid=891287&pcount=1&ptype=1' target='_blank' class='btn-buy'>加入购物车</a><a id='coll891287' href='javascript:;' class='btn-coll'>关注</a><a class='btn-compare btn-compare-s' id='comp_891287' skuid='891287'><span></span>对比</a></div><div class="p-shopnum"></div></li>
+</ul>
+</div>
+<script type="text/javascript">var jdwsment = {"key":"4E4A6D206217F2D38431F85CFA2B1DA1AB7D0028","skuids":"539349,539348,959495,862534,647812,738388,916185,656206,976084,974077,920572,570129,764901,760695,841933,855739,791109,863619,932144,907424,858025,834827,980682,877539,826212,862538,971489,771439,970602,772064,722416,973861,816450,981821,763267,891287"};</script>
+<script>(function() {var plist = $('#plist'),ul = plist.children('.list-h'),li = ul.children('li'),skuids = [], res = [], flag = 0;if ( typeof jdwsment !== 'undefined') {skuids = jdwsment.skuids.split(',');} else {for (var i = 0; i < li.length; i++) {skuids.push( li.eq(i).attr('sku') );}}function getPrice(skuids) {var areaId = 1;$.ajax({url: 'http://p.3.cn/prices/mgets?skuIds=J_' + skuids.join(',J_') + '&type=1&area=' + areaId ,dataType: 'jsonp',success: function(r) {if ( !r && !r.length ) { return false; }for ( var i = 0; i < r.length; i++ ) {var sku = r[i].id.replace('J_', '');var price = r[i].p;if ( price > 0 ) {ul.children('li[sku="'+ sku +'"]').find('.p-price strong').html( '￥' + price + '' );} else {ul.children('li[sku="'+ sku +'"]').find('.p-price strong').html( '暂无报价' );}}}});}getPrice(skuids);})();</script>
+<div class="m clearfix">
+<div class="pagin fr"><span class='prev-disabled'>上一页<b></b></span>
+<a href='9987-653-655-0-0-0-0-0-0-0-1-1-1-1-1-72-4137-33.html' class='current'>1</a>
+<a href='9987-653-655-0-0-0-0-0-0-0-1-1-2-1-1-72-4137-33.html'>2</a>
+<a href='9987-653-655-0-0-0-0-0-0-0-1-1-3-1-1-72-4137-33.html'>3</a>
+<span class='text'>…</span>
+<a href='9987-653-655-0-0-0-0-0-0-0-1-1-52-1-1-72-4137-33.html'>52</a>
+<a href='9987-653-655-0-0-0-0-0-0-0-1-1-2-1-1-72-4137-33.html' class='next' >下一页<b></b></a>
+</div>
+</div>
+<div reco_id="2" class="shop-choice hide" id="shop-choice"></div>
+<div class="m" id="r-entry">
+<strong>不知道选哪款商品？试试向京东百万资深会员提问，请他们帮您来选购</strong><a href='http://s.360buy.com?cat=655' target='_blank' class='btn_entry'>请大家给我推荐</a></div>
+
+    </div>
+    <script type="text/javascript">
+        $('#select-tv a.fore').bind('mouseover',function(){
+            $(this).addClass('curr');
+        }).bind('mouseout',function(){
+            $(this).removeClass('curr');
+        });
+
+    </script>
+    <!--right-extra end-->
+    <script type="text/javascript"> function lazyload(option) { var settings = { defObj: null, defHeight: 0 }; settings = $.extend(settings, option || {}); var defHeight = settings.defHeight, defObj = (typeof settings.defObj == "object") ? settings.defObj.find("img") : $(settings.defObj).find("img"); var pageTop = function() { var d = document, y = (navigator.userAgent.toLowerCase().match(/iPad/i) == "ipad") ? window.pageYOffset : Math.max(d.documentElement.scrollTop, d.body.scrollTop); return d.documentElement.clientHeight + y - settings.defHeight }; var imgLoad = function() { defObj.each(function() { if ($(this).offset().top <= pageTop()) { var src2 = $(this).attr("src2"); if (src2) { $(this).attr("src", src2).removeAttr("src2") } } }) }; imgLoad(); $(window).bind("scroll", function() { imgLoad() }) } lazyload({ defObj: "#plist" })</script>
+    <div class="left">
+        <div class="m" id="sortlist" clstag="thirdtype|keycount|thirdtype|sortlist">
+            
+<div class="mt"><h2>手机</h2></div><DIV class=mc><DIV class="item current"><H3><B></B>手机通讯</H3>
+<UL>
+<LI><a href='http://list.jd.com/9987-653-655.html'>手机</a></LI>
+<LI><a href='http://list.jd.com/9987-653-659.html'>对讲机</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>运营商</H3>
+<UL>
+<LI><a href='http://list.jd.com/9987-6880-6881.html'>购机送费</a></LI>
+<LI><a href='http://list.jd.com/9987-6880-6882.html'>“0”元购机</a></LI>
+<LI><a href='http://list.jd.com/9987-6880-1195.html'>选号入网</a></LI>
+</UL></DIV><DIV class=item><H3><B></B>手机配件</H3>
+<UL>
+<LI><a href='http://list.jd.com/9987-830-860.html'>手机电池</a></LI>
+<LI><a href='http://list.jd.com/9987-830-863.html'>蓝牙耳机</a></LI>
+<LI><a href='http://list.jd.com/9987-830-861.html'>充电器/数据线</a></LI>
+<LI><a href='http://list.jd.com/9987-830-862.html'>手机耳机</a></LI>
+<LI><a href='http://list.jd.com/9987-830-867.html'>手机贴膜</a></LI>
+<LI><a href='http://list.jd.com/9987-830-1099.html'>手机存储卡</a></LI>
+<LI><a href='http://list.jd.com/9987-830-866.html'>手机保护套</a></LI>
+<LI><a href='http://list.jd.com/9987-830-864.html'>车载配件</a></LI>
+<LI><a href='http://list.jd.com/9987-830-5003.html'>iPhone 配件</a></LI>
+<LI><a href='http://list.jd.com/9987-830-868.html'>其它配件</a></LI>
+</UL></DIV></DIV>
+
+        </div>
+        <!--sortlist end-->
+        <script type="text/javascript">
+            $("#sortlist h3").bind("click",function(){
+                var element=$(this).parent();
+                if (element.hasClass("current")){
+                    element.removeClass("current");
+                }else{
+                    element.addClass("current");
+                }
+            })
+        </script>
+
+        <div class="m limitbuy hide" id="limitbuy537" clstag="thirdtype|keycount|thirdtype|limitbuy536">
+<div class="mt">
+<h2>消费电子限时抢购</h2>
+</div>
+<div class="mc">
+<div class="clock" id="clock537">正在加载…</div>
+<div id="limit537"></div>
+</div>
+</div><!--limitbuy end -->
+
+
+        <div id="ad_left" reco_id="6" class="m m0 hide"></div><!--搜索广告推荐-->
+        <div id="finalbuy" class="hide m m0"></div><!--关注手机最终购买-->
+        <div id="weekRank" class="m rank" clstag="thirdtype|keycount|thirdtype|mrank">
+            <div class="mt">
+                <h2>一周销量排行榜</h2>
+            </div>
+            <div class="mc">
+                <ul class="tabcon">
+                    
+<li class="fore fore1"><span>1</span><div class="p-img" ><a target="_blank"  href="http://item.jd.com/1026784137.html"><img alt="三巨网（3GNET）T900智能手机QHD屏 前300万像素后800万像素 粉" src="http://img12.360buyimg.com/n5/g13/M01/0B/13/rBEhVFI0Uk8IAAAAAAKtiIhx5iIAADKIQIB310AAq2g945.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/1026784137.html">三巨网（3GNET）T900智能手机QHD屏 前300万像素后800万像素 粉</a></div><div class="p-price"  sku="1026784137" ><strong></strong></div></li><li  class="fore2"><span>2</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/1033904429.html"><img alt="传奇（SAGA）A818 双卡双待袖珍迷你时尚翻盖学生、儿童、女性手机 粉红" src="http://img14.360buyimg.com/n5/g14/M06/0D/17/rBEhVVIhjqIIAAAAAAC9vxcXHJ0AACrvwLWoGYAAL3X230.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/1033904429.html">传奇（SAGA）A818 双卡双待袖珍迷你时尚翻盖学生、儿童、女性手机 粉红</a></div><div class="p-price"  sku="1033904429" style="display:none;" ><strong></strong></div></li><li  class="fore3"><span>3</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/1042447319.html"><img alt="科铭F699A三防手机老人手机老年机老人机老年手机 老年人手机老年人专用手机大字体大按键 红色" src="http://img14.360buyimg.com/n5/g13/M05/11/03/rBEhVFJfSUkIAAAAAAVawUAGC7sAAEO5gPNUSgABVrZ524.png" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/1042447319.html">科铭F699A三防手机老人手机老年机老人机老年手机 老年人手机老年人专用手机大字体大按键 红色</a></div><div class="p-price"  sku="1042447319" style="display:none;" ><strong></strong></div></li><li><span>4</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/979535.html"><img alt="创维 Q86 电信老人手机（黑色） CDMA" src="http://img10.360buyimg.com/n5/g13/M00/10/07/rBEhU1JZCN4IAAAAAAFrJCBspScAAED7gIeVXMAAWs8927.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/979535.html">创维 Q86 电信老人手机（黑色） CDMA</a></div><div class="p-price"  sku="979535" style="display:none;" ><strong></strong></div></li><li><span>5</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/1028050009.html"><img alt="启辰（D.Venucia）200 双卡双待 5.3寸高清大屏 安卓4.0智能机 wifi 白色" src="http://img14.360buyimg.com/n5/g14/M08/06/06/rBEhV1HpBOQIAAAAAAMpUrrATs8AABNtgKfcB0AAylq909.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/1028050009.html">启辰（D.Venucia）200 双卡双待 5.3寸高清大屏 安卓4.0智能机 wifi 白色</a></div><div class="p-price"  sku="1028050009" style="display:none;" ><strong></strong></div></li><li><span>6</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/1030006498.html"><img alt="长虹（CHANGHONG）W6锋韵手机 黑色" src="http://img13.360buyimg.com/n5/g14/M00/06/1D/rBEhVVHuRFsIAAAAAAC-gOnq6vMAABWZAKR3y4AAL6Y575.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/1030006498.html">长虹（CHANGHONG）W6锋韵手机 黑色</a></div><div class="p-price"  sku="1030006498" style="display:none;" ><strong></strong></div></li><li><span>7</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/872169.html"><img alt="索尼（SONY）Xperia L S36h 3G手机（白色）WCDMA/GSM" src="http://img14.360buyimg.com/n5/g12/M00/00/16/rBEQYVGB0bcIAAAAAAE23eUVjuIAAAI0QJ-KfgAATb1639.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/872169.html">索尼（SONY）Xperia L S36h 3G手机（白色）WCDMA/GSM</a></div><div class="p-price"  sku="872169" style="display:none;" ><strong></strong></div></li><li><span>8</span><div class="p-img" style="display:none;"><a target="_blank"  href="http://item.jd.com/953000.html"><img alt="华为 P6 电信3G手机（黑色） CDMA2000/GSM 双模双待双通广东送话费版本" src="http://img10.360buyimg.com/n5/g14/M03/02/0F/rBEhVlHIE-AIAAAAAAFbd2VasmMAAAfGAFO0e0AAVuP873.jpg" width="50" height="50"></a></div><div class="p-name"><a target="_blank"  href="http://item.jd.com/953000.html">华为 P6 电信3G手机（黑色） CDMA2000/GSM 双模双待双通广东送话费版本</a></div><div class="p-price"  sku="953000" style="display:none;" ><strong></strong></div></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--rank end-->
+        <div id="alsobuy" class="hide m m0"></div><!--浏览XXX还购买了--><script src="http://misc.360buyimg.com/201007/js/p.pshow.djd.area.doreplacelist.js?t=20110928" type="text/javascript"></script><div class="m" clstag="thirdtype|keycount|thirdtype|m" id="da211x261-1"></div><div class="m" id="da-app" clstag="thirdtype|keycount|thirdtype|mapp"><a target="_blank" href="http://c.fa.360buy.com/adclick?sid=2&amp;cid=25&amp;aid=761&amp;bid=0&amp;unit=3315&amp;advid=3127&amp;guv=&amp;url=http://app.360buy.com/"><img width="211" height="153" src="http://img14.360buyimg.com/da/20111121/211_153_hpWKym.jpg" app="image:poster" alt=""></a></div>
+    </div>
+    <!--left end-->
+    <span class="clr"></span>
+    <div id="Collect_Tip" class="Tip360 w260"></div>
+</div>
+
+<script>
+
+
+
+    (function refreshPrice() {
+        var skuids = [],
+                hotSalePriceQ = $("#hotsale .p-price"),
+                weekRankPriceQ = $("#weekRank .p-price"),
+                skuId;
+
+        for (var i = 0, l=hotSalePriceQ.length; i < l; i++) {
+            skuId = hotSalePriceQ.eq(i).attr('sku');
+            if ( skuId ) {
+                skuids.push( skuId );
+            }
+        }
+        for (var i = 0, l=weekRankPriceQ.length; i < l; i++) {
+            skuId = weekRankPriceQ.eq(i).attr('sku');
+            if ( skuId ) {
+                skuids.push( skuId );
+            }
+        }
+
+        function getPrice(skuids) {
+            if ( !skuids || skuids.length == 0 ) {
+                return;
+            }
+
+
+            $.ajax({
+                url: 'http://p.3.cn/prices/mgets?skuIds=J_' + skuids.join(',J_') + '&type=1',
+                dataType: 'jsonp',
+                success: function(r) {
+                    if ( !r && !r.length ) { return false; }
+                    for ( var i = 0; i < r.length; i++ ) {
+                        var sku = r[i].id.replace('J_', '');
+                        var price = r[i].p;
+                        if ( price > 0 ) {
+                            $(".p-price[sku='"+sku+"']").children("strong").html( '\uffe5' + price);
+                        } else {
+                            $(".p-price[sku='"+sku+"']").children("strong").html( '暂无报价' );
+                        }
+                    }
+                }
+            });
+        }
+        getPrice(skuids);
+    })();
+
+
+
+</script>
+
+<script type="text/javascript">
+
+
+
+    var weekRank2Effect = function (){
+        var firstNode = $("#weekRank li").eq(0);
+
+        function  bindEvent(linode,i){
+            linode.bind('mouseover',function(){
+                if( i != 0 ) {
+                    firstNode.removeClass('fore').find('.p-img').hide();
+                    firstNode.find('.p-price').hide();
+
+                    linode.addClass('fore').find('.p-img').show();
+                    linode.find('.p-price').show();
+                }
+            }).bind('mouseout',function(){
+                        if( i != 0 ) {
+                            linode.removeClass('fore').find('.p-img').hide();
+                            linode.find('.p-price').hide();
+
+                            firstNode.addClass('fore').find('.p-img').show();
+                            firstNode.find('.p-price').show();
+                        }
+                    });
+        }
+        $("#weekRank").find("li").each(function(i){
+            var linode = $(this);
+            bindEvent(linode,i);
+        });
+    }
+
+    weekRank2Effect();
+</script>
+<div class="w">
+    <div id="product-track">
+        <div class="right">
+            <div id="maybe-like" class="m m2" data-widget="tabs">
+                <div class="mt">
+                    <h2>根据浏览猜你喜欢</h2>
+                    <div class="extra">
+                    </div>
+                </div>
+                <div class="mc">
+                    <div class="iloading">正在加载中，请稍候...</div>
+                </div>
+            </div>
+            <!--maybe-like-->
+        </div><!-- right -->
+        <div class="left">
+            <div id="recent-view-track" class="m m2">
+                <div class="mt">
+                    <h2>最近浏览</h2>
+                </div>
+                <div class="mc">
+                    <div class="iloading">正在加载中，请稍候...</div>
+                </div>
+            </div>
+            <!--recent-view-track end-->
+        </div><!-- left -->
+        <span class="clr"></span>
+    </div>
+</div>
+<div class="w">
+    <div id="service-2013">
+        <dl class="fore1">
+            <dt><b></b><strong>购物指南</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-56.html" target="_blank" rel="nofollow">购物流程</a></div>
+                <div><a href="http://help.jd.com/help/question-57.html" target="_blank" rel="nofollow">会员介绍</a></div>
+                <div><a href="http://help.jd.com/help/question-181.html" target="_blank" rel="nofollow">团购/机票</a></div>
+                <div><a href="http://help.jd.com/help/question-61.html" target="_blank" rel="nofollow">常见问题</a></div>
+                <div><a href="http://help.jd.com/help/question-63.html" target="_blank" rel="nofollow">大家电</a></div>
+                <div><a href="http://help.jd.com/index.html" target="_blank" rel="nofollow">联系客服</a></div>
+            </dd>
+        </dl>
+        <dl class="fore2">
+            <dt><b></b><strong>配送方式</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-64.html" target="_blank" rel="nofollow">上门自提</a></div>
+                <div><a href="http://help.jd.com/help/question-360.html" target="_blank" rel="nofollow">211限时达</a></div>
+                <div><a href="http://help.jd.com/help/distribution-768.html" target="_blank" rel="nofollow">快递运输</a></div>
+                <div><a href="http://market.jd.com/giftcard/index.html#one5" target="_blank" rel="nofollow">如何送礼</a></div>
+                <div><a href="http://en.360buy.com/" target="_blank">Global Shipping</a></div>
+            </dd>
+        </dl>
+        <dl class="fore3">
+            <dt><b></b><strong>支付方式</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-67.html" target="_blank" rel="nofollow">货到付款</a></div>
+                <div><a href="http://help.jd.com/help/question-68.html" target="_blank" rel="nofollow">在线支付</a></div>
+                <div><a href="http://help.jd.com/help/question-71.html" target="_blank" rel="nofollow">分期付款</a></div>
+                <div><a href="http://help.jd.com/help/question-69.html" target="_blank" rel="nofollow">邮局汇款</a></div>
+                <div><a href="http://help.jd.com/help/question-70.html" target="_blank" rel="nofollow">公司转账</a></div>
+            </dd>
+        </dl>
+        <dl class="fore4">
+            <dt><b></b><strong>售后服务</strong></dt>
+            <dd>
+                <div><a href="http://myjd.jd.com/afs/help/afshelp.action" target="_blank" rel="nofollow">售后政策</a></div>
+                <div><a href="http://help.jd.com/help/question-99.html" target="_blank" rel="nofollow">价格保护</a></div>
+                <div><a href="http://help.jd.com/help/question-100.html" target="_blank" rel="nofollow">退款说明</a></div>
+                <div><a href="http://myjd.jd.com/repair/repairs.action" target="_blank" rel="nofollow">返修/退换货</a></div>
+                <div><a href="http://order.jd.com/normal/list.action" target="_blank" rel="nofollow">取消订单</a></div>
+            </dd>
+        </dl>
+        <dl class="fore5">
+            <dt><b></b><strong>特色服务</strong></dt>
+            <dd>
+                <div><a href="http://help.jd.com/help/question-79.html" target="_blank">夺宝岛</a></div>
+                <div><a href="http://help.jd.com/help/question-86.html" target="_blank">DIY装机</a></div>
+                <div><a href="http://fuwu.jd.com/" target="_blank" rel="nofollow">延保服务</a></div>
+                <div><a href="http://market.jd.com/giftcard/index.html" target="_blank" rel="nofollow">京东礼品卡</a></div>
+                <div><a href="http://help.jd.com/help/question-91.html" target="_blank" rel="nofollow">节能补贴</a></div>
+            </dd>
+        </dl>
+        <span class="clr"></span>
+    </div>
+</div><!-- service end -->
+<div class="w">
+    <div id="footer-2013">
+        <div class="links"><a href="http://www.jd.com/intro/about.aspx" target="_blank" rel="nofollow">关于我们</a>|<a href="http://www.jd.com/contact/" target="_blank" rel="nofollow">联系我们</a>|<a href="http://zhaopin.jd.com/" target="_blank" rel="nofollow">人才招聘</a>|<a href="http://www.jd.com/contact/joinin.aspx" target="_blank" rel="nofollow">商家入驻</a>|<a href="http://www.jd.com/intro/service.aspx" target="_blank" rel="nofollow">广告服务</a>|<a href="http://app.jd.com/" target="_blank" rel="nofollow">手机京东</a>|<a href="http://club.jd.com/links.aspx" target="_blank">友情链接</a>|<a href="http://cps.jd.com/" target="_blank">销售联盟</a>|<a target="_blank" href="http://club.jd.com/">京东社区</a>|<a target="_blank" href="http://gongyi.jd.com">京东公益</a></div>
+        <div class="copyright">北京市公安局朝阳分局备案编号110105014669&nbsp;&nbsp;|&nbsp;&nbsp;京ICP证070359号&nbsp;&nbsp;|&nbsp;&nbsp;互联网药品信息服务资格证编号(京)-非经营性-2011-0034<br><a target="_blank" href="http://misc.360buyimg.com/skin/df/i/com/f_music.jpg" rel="nofollow">音像制品经营许可证苏宿批005号</a>&nbsp;&nbsp;|&nbsp;&nbsp;出版物经营许可证编号新出发(苏)批字第N-012号&nbsp;&nbsp;|&nbsp;&nbsp;互联网出版许可证编号新出网证(京)字150号<br><a target="_blank" href="http://misc.360buyimg.com/wz/wlwhjyxkz.jpg">网络文化经营许可证京网文[2011]0168-061号</a>&nbsp;&nbsp;Copyright&nbsp;&copy;&nbsp;2004-2013&nbsp;&nbsp;京东JD.com&nbsp;版权所有<br />京东旗下网站：<a href="http://www.360top.com/" target="_blank">360TOP</a>&nbsp;&nbsp;<a href="http://www.minitiao.com/" target="_blank">迷你挑</a>&nbsp;&nbsp;<a target="_blank" href="http://en.360buy.com/">English Site</a></div>
+        <div class="authentication"><a href="http://www.hd315.gov.cn/beian/view.asp?bianhao=010202007080200026" target="_blank" rel="nofollow"><img data-lazyload="http://img10.360buyimg.com/da/20110329/108_40_zZOKnl.gif" width="108" height="40" alt="经营性网站备案中心"></a><script type="text/JavaScript">function CNNIC_change(eleId){var str= document.getElementById(eleId).href;var str1 =str.substring(0,(str.length-6));str1+=CNNIC_RndNum(6); document.getElementById(eleId).href=str1;}function CNNIC_RndNum(k){var rnd=""; for (var i=0;i < k;i++) rnd+=Math.floor(Math.random()*10); return rnd;}</script> <a href="https://ss.cnnic.cn/verifyseal.dll?sn=2008070300100000031&ct=df&pa=294005" tabindex="-1" id="urlknet" target="_blank" rel="nofollow"> <img alt="&#x53EF;&#x4FE1;&#x7F51;&#x7AD9;" name="CNNIC_seal" border="true" data-lazyload="http://img11.360buyimg.com/da/g8/M03/0C/0E/rBEHaFCFC5QIAAAAAAASVQX9RAYAACb2wHUV1kAABJt760.gif" width="108" height="40" oncontextmenu="return false;" onclick="CNNIC_change('urlknet')" /></a><a href="http://about.58.com/fqz/index.html" target="_blank" rel="nofollow"><img data-lazyload="http://img12.360buyimg.com/da/g5/M02/0D/17/rBEIDE_nzcIIAAAAAAB30mYXo5QAACrhACj22IAAHfq378.png" width="108" height="40" alt="朝阳网络警察"></a><a href="https://search.szfw.org/cert/l/CX20120111001803001836" target="_blank" rel="nofollow"><img data-lazyload="http://img13.360buyimg.com/da/20120221/112_40_WvArIl.png" width="112" height="40"></a></div>
+    </div>
+</div><!-- footer end -->
+
+<script type="text/javascript">(function(){var hotwords="<strong>热门搜索：</strong><a href='http://search.360buy.com/Search?keyword=%E6%B2%99%E6%BC%A0%E9%A3%8E%E6%9A%B4&enc=utf-8' target='_blank' style='color: #CC0000'>沙漠风暴</a><a href='http://search.360buy.com/Search?keyword=尼康S5100' target='_blank'>尼康S5100</a><a href='http://search.360buy.com/Search?keyword=三星I8250'target='_blank'>三星I8250</a><a href=http://search.360buy.com/Search?keyword=%E5%8F%B0%E7%94%B5%20P85&enc=utf-8&area=1' target='_blank'>台电 P85</a><a href='http://search.360buy.com/Search?keyword=诺基亚 808' target='_blank'>诺基亚 808</a><a href='http://search.360buy.com/Search?keyword=RCA播放器' target='_blank'>RCA播放器</a><a href='http://search.360buy.com/Search?keyword=中兴 U970' target='_blank'>中兴 U970</a><a href='http://search.360buy.com/Search?keyword=三星I569' target='_blank'>三星I569</a><a href='http://search.360buy.com/Search?keyword=i5508' target='_blank'>i5508</a><a href='http://search.360buy.com/Search?keyword=C6' target='_blank'>C6</a>";
+    var keywords="One xc";
+    $("#hotwords").html(hotwords);
+    $("#key").val(keywords).bind("focus",function(){
+        if (this.value==keywords){this.value="";this.style.color="#333"}
+    }).bind("blur",function(){
+                if (this.value==""){this.value=keywords;this.style.color="#999"}
+            });
+})();
+</script>
+<script type="text/javascript" src="http://misc.360buyimg.com/lib/js/2012/lib-v1.js?t=20120809"></script>
+<script type="text/javascript">$("#filter .type").hoverForIE6();</script>
+<script type="text/javascript">$.jdCalcul([537]);</script>
+<script type="text/javascript">pageConfig.FN_InitContrast();</script>
+<script type="text/javascript" src="http://misc.360buyimg.com/201007/js/p.plist20110721.js?t=20120726"></script>
+<script type="text/javascript" src="http://simigoods.360buy.com/js/BiForWeb.js"></script>
+<script type="text/javascript" src="http://misc.360buyimg.com/product/js/2012/footprint.js"></script>
+<script type="text/javascript">
+    (function(){
+        var ref=document.referrer;
+        if(ref && ref.indexOf("jd.com")==-1 && ref.indexOf("360buy.com")==-1 ){
+            ListRecP(655);
+        }
+    })();
+    function feed_publish_collect(type,wid){jQuery.getJSON("http://i.360buy.com/feed/send.action?type="+type+"&commodityId="+wid+"&jsoncallback=?",function(json){})}
+    if($("#hotsale").length>0){log('thirdtype', 'showhotsale_M');}
+</script>
+<script type="text/javascript">
+    var sidePanle=new pageConfig.FN_InitSidebar();
+    sidePanle.addItem("<a class='research' target='_blank' href='http://market.jd.com/jdvote/vote2.aspx?voteId=123'><b></b>调查问卷</a>")
+    sidePanle.setTop();
+    sidePanle.scroll();
+</script>
+<script type="text/javascript" src="http://simigoods.360buy.com/js/ThridRec.js?t=20121129"></script>
+<script type="text/javascript" src="http://fa.jd.com/loadFa.js?aid=2_145_766"></script>
+<script type="text/javascript" src="http://d.360buy.com/hotwords/get?position=A-digital-013"></script>
+<script type='text/javascript'>
+    //$('*[data-widget=tabs]').each(function(){$(this).Jtab({compatible:true,event:'click'})});
+
+    var iplocation = {"北京": { id: "1", root: 0, djd: 1,c:72 },"上海": { id: "2", root: 1, djd: 1,c:78 },"天津": { id: "3", root: 0, djd: 1,c:51035 },"重庆": { id: "4", root: 3, djd: 1,c:113 },"河北": { id: "5", root: 0, djd: 1,c:142 },"山西": { id: "6", root: 0, djd: 1,c:303 },"河南": { id: "7", root: 0, djd: 1,c:412 },"辽宁": { id: "8", root: 0, djd: 1,c:560 },"吉林": { id: "9", root: 0, djd: 1,c:639 },"黑龙江": { id: "10", root: 0, djd: 1,c:698 },"内蒙古": { id: "11", root: 0, djd: 0,c:799 },"江苏": { id: "12", root: 1, djd: 1,c:904 },"山东": { id: "13", root: 0, djd: 1,c:1000 },"安徽": { id: "14", root: 1, djd: 1,c:1116 },"浙江": { id: "15", root: 1, djd: 1,c:1158 },"福建": { id: "16", root: 2, djd: 1,c:1303 },"湖北": { id: "17", root: 0, djd: 1,c:1381 },"湖南": { id: "18", root: 2, djd: 1,c:1482 },"广东": { id: "19", root: 2, djd: 1,c:1601 },"广西": { id: "20", root: 2, djd: 1,c:1715 },"江西": { id: "21", root: 2, djd: 1,c:1827 },"四川": { id: "22", root: 3, djd: 1,c:1930 },"海南": { id: "23", root: 2, djd: 1,c:2121 },"贵州": { id: "24", root: 3, djd: 1,c:2144 },"云南": { id: "25", root: 3, djd: 1,c:2235 },"西藏": { id: "26", root: 3, djd: 0,c:2951 },"陕西": { id: "27", root: 3, djd: 1,c:2376 },"甘肃": { id: "28", root: 3, djd: 1,c:2487 },"青海": { id: "29", root: 3, djd: 0,c:2580 },"宁夏": { id: "30", root: 3, djd: 1,c:2628 },"新疆": { id: "31", root: 3, djd: 0,c:2652 },"台湾": { id: "32", root: 2, djd: 0,c:2768 },"香港": { id: "42", root: 2, djd: 0,c:2754 },"澳门": { id: "43", root: 2, djd: 0,c:2770 },"钓鱼岛": { id: "84", root: 2, djd: 0,c:84 }};
+    var provinceCityJson = {"1":[{"id":72,"name":"朝阳区"},{"id":2800,"name":"海淀区"},{"id":2801,"name":"西城区"},{"id":2802,"name":"东城区"},{"id":2803,"name":"崇文区"},{"id":2804,"name":"宣武区"},{"id":2805,"name":"丰台区"},{"id":2806,"name":"石景山区"},{"id":2807,"name":"门头沟"},{"id":2808,"name":"房山区"},{"id":2809,"name":"通州区"},{"id":2810,"name":"大兴区"},{"id":2812,"name":"顺义区"},{"id":2814,"name":"怀柔区"},{"id":2816,"name":"密云区"},{"id":2901,"name":"昌平区"},{"id":2953,"name":"平谷区"},{"id":3065,"name":"延庆县"}],"2":[{"id":2811,"name":"卢湾区"},{"id":2813,"name":"徐汇区"},{"id":2815,"name":"长宁区"},{"id":2817,"name":"静安区"},{"id":2820,"name":"闸北区"},{"id":2822,"name":"虹口区"},{"id":2823,"name":"杨浦区"},{"id":2824,"name":"宝山区"},{"id":2825,"name":"闵行区"},{"id":2826,"name":"嘉定区"},{"id":2830,"name":"浦东新区"},{"id":2833,"name":"青浦区"},{"id":2834,"name":"松江区"},{"id":2835,"name":"金山区"},{"id":2836,"name":"南汇区"},{"id":2837,"name":"奉贤区"},{"id":2841,"name":"普陀区"},{"id":2919,"name":"崇明县"},{"id":78,"name":"黄浦区"}],"3":[{"id":51035,"name":"东丽区"},{"id":51036,"name":"和平区"},{"id":51037,"name":"河北区"},{"id":51038,"name":"河东区"},{"id":51039,"name":"河西区"},{"id":51040,"name":"红桥区"},{"id":51041,"name":"蓟县"},{"id":51042,"name":"静海县"},{"id":51043,"name":"南开区"},{"id":51044,"name":"塘沽区"},{"id":51045,"name":"西青区"},{"id":51046,"name":"武清区"},{"id":51047,"name":"津南区"},{"id":51048,"name":"汉沽区"},{"id":51049,"name":"大港区"},{"id":51050,"name":"北辰区"},{"id":51051,"name":"宝坻区"},{"id":51052,"name":"宁河县"}],"4":[{"id":113,"name":"万州区"},{"id":114,"name":"涪陵区"},{"id":115,"name":"梁平县"},{"id":119,"name":"南川区"},{"id":123,"name":"潼南县"},{"id":126,"name":"大足区"},{"id":128,"name":"黔江区"},{"id":129,"name":"武隆县"},{"id":130,"name":"丰都县"},{"id":131,"name":"奉节县"},{"id":132,"name":"开县"},{"id":133,"name":"云阳县"},{"id":134,"name":"忠县"},{"id":135,"name":"巫溪县"},{"id":136,"name":"巫山县"},{"id":137,"name":"石柱县"},{"id":138,"name":"彭水县"},{"id":139,"name":"垫江县"},{"id":140,"name":"酉阳县"},{"id":141,"name":"秀山县"},{"id":48131,"name":"璧山县"},{"id":48132,"name":"荣昌县"},{"id":48133,"name":"铜梁县"},{"id":48201,"name":"合川区"},{"id":48202,"name":"巴南区"},{"id":48203,"name":"北碚区"},{"id":48204,"name":"江津区"},{"id":48205,"name":"渝北区"},{"id":48206,"name":"长寿区"},{"id":48207,"name":"永川区"},{"id":50950,"name":"江北区"},{"id":50951,"name":"南岸区"},{"id":50952,"name":"九龙坡区"},{"id":50953,"name":"沙坪坝区"},{"id":50954,"name":"大渡口区"},{"id":50995,"name":"綦江区"},{"id":51026,"name":"渝中区"},{"id":51027,"name":"高新区"},{"id":51028,"name":"北部新区"},{"id":4164,"name":"城口县"},{"id":3076,"name":"高新区"}],"5":[{"id":142,"name":"石家庄市"},{"id":148,"name":"邯郸市"},{"id":164,"name":"邢台市"},{"id":199,"name":"保定市"},{"id":224,"name":"张家口市"},{"id":239,"name":"承德市"},{"id":248,"name":"秦皇岛市"},{"id":258,"name":"唐山市"},{"id":264,"name":"沧州市"},{"id":274,"name":"廊坊市"},{"id":275,"name":"衡水市"}],"6":[{"id":303,"name":"太原市"},{"id":309,"name":"大同市"},{"id":318,"name":"阳泉市"},{"id":325,"name":"晋城市"},{"id":330,"name":"朔州市"},{"id":336,"name":"晋中市"},{"id":350,"name":"忻州市"},{"id":368,"name":"吕梁市"},{"id":379,"name":"临汾市"},{"id":398,"name":"运城市"},{"id":3074,"name":"长治市"}],"7":[{"id":412,"name":"郑州市"},{"id":420,"name":"开封市"},{"id":427,"name":"洛阳市"},{"id":438,"name":"平顶山市"},{"id":446,"name":"焦作市"},{"id":454,"name":"鹤壁市"},{"id":458,"name":"新乡市"},{"id":468,"name":"安阳市"},{"id":475,"name":"濮阳市"},{"id":482,"name":"许昌市"},{"id":489,"name":"漯河市"},{"id":495,"name":"三门峡市"},{"id":502,"name":"南阳市"},{"id":517,"name":"商丘市"},{"id":527,"name":"周口市"},{"id":538,"name":"驻马店市"},{"id":549,"name":"信阳市"},{"id":2780,"name":"济源市"}],"8":[{"id":560,"name":"沈阳市"},{"id":573,"name":"大连市"},{"id":579,"name":"鞍山市"},{"id":584,"name":"抚顺市"},{"id":589,"name":"本溪市"},{"id":593,"name":"丹东市"},{"id":598,"name":"锦州市"},{"id":604,"name":"葫芦岛市"},{"id":609,"name":"营口市"},{"id":613,"name":"盘锦市"},{"id":617,"name":"阜新市"},{"id":621,"name":"辽阳市"},{"id":632,"name":"朝阳市"},{"id":6858,"name":"铁岭市"}],"9":[{"id":639,"name":"长春市"},{"id":644,"name":"吉林市"},{"id":651,"name":"四平市"},{"id":2992,"name":"辽源市"},{"id":657,"name":"通化市"},{"id":664,"name":"白山市"},{"id":674,"name":"松原市"},{"id":681,"name":"白城市"},{"id":687,"name":"延边州"}],"10":[{"id":727,"name":"鹤岗市"},{"id":731,"name":"双鸭山市"},{"id":737,"name":"鸡西市"},{"id":742,"name":"大庆市"},{"id":753,"name":"伊春市"},{"id":757,"name":"牡丹江市"},{"id":765,"name":"佳木斯市"},{"id":773,"name":"七台河市"},{"id":776,"name":"黑河市"},{"id":782,"name":"绥化市"},{"id":793,"name":"大兴安岭地区"},{"id":698,"name":"哈尔滨市"},{"id":712,"name":"齐齐哈尔市"}],"11":[{"id":799,"name":"呼和浩特市"},{"id":805,"name":"包头市"},{"id":810,"name":"乌海市"},{"id":812,"name":"赤峰市"},{"id":823,"name":"乌兰察布市"},{"id":835,"name":"锡林郭勒盟"},{"id":848,"name":"呼伦贝尔市"},{"id":870,"name":"鄂尔多斯市"},{"id":880,"name":"巴彦淖尔市"},{"id":891,"name":"阿拉善盟"},{"id":895,"name":"兴安盟"},{"id":902,"name":"通辽市"}],"12":[{"id":904,"name":"南京市"},{"id":911,"name":"徐州市"},{"id":919,"name":"连云港市"},{"id":925,"name":"淮安市"},{"id":933,"name":"宿迁市"},{"id":939,"name":"盐城市"},{"id":951,"name":"扬州市"},{"id":959,"name":"泰州市"},{"id":965,"name":"南通市"},{"id":972,"name":"镇江市"},{"id":978,"name":"常州市"},{"id":984,"name":"无锡市"},{"id":988,"name":"苏州市"}],"13":[{"id":2900,"name":"济宁市"},{"id":1000,"name":"济南市"},{"id":1007,"name":"青岛市"},{"id":1016,"name":"淄博市"},{"id":1022,"name":"枣庄市"},{"id":1025,"name":"东营市"},{"id":1032,"name":"潍坊市"},{"id":1042,"name":"烟台市"},{"id":1053,"name":"威海市"},{"id":1058,"name":"莱芜市"},{"id":1060,"name":"德州市"},{"id":1072,"name":"临沂市"},{"id":1081,"name":"聊城市"},{"id":1090,"name":"滨州市"},{"id":1099,"name":"菏泽市"},{"id":1108,"name":"日照市"},{"id":1112,"name":"泰安市"}],"14":[{"id":1151,"name":"黄山市"},{"id":1159,"name":"滁州市"},{"id":1167,"name":"阜阳市"},{"id":1174,"name":"亳州市"},{"id":1180,"name":"宿州市"},{"id":1201,"name":"池州市"},{"id":1206,"name":"六安市"},{"id":2971,"name":"宣城市"},{"id":1114,"name":"铜陵市"},{"id":1116,"name":"合肥市"},{"id":1121,"name":"淮南市"},{"id":1124,"name":"淮北市"},{"id":1127,"name":"芜湖市"},{"id":1132,"name":"蚌埠市"},{"id":1137,"name":"马鞍山市"},{"id":1140,"name":"安庆市"}],"15":[{"id":1158,"name":"宁波市"},{"id":1273,"name":"衢州市"},{"id":1280,"name":"丽水市"},{"id":1290,"name":"台州市"},{"id":1298,"name":"舟山市"},{"id":1213,"name":"杭州市"},{"id":1233,"name":"温州市"},{"id":1243,"name":"嘉兴市"},{"id":1250,"name":"湖州市"},{"id":1255,"name":"绍兴市"},{"id":1262,"name":"金华市"}],"16":[{"id":1303,"name":"福州市"},{"id":1315,"name":"厦门市"},{"id":1317,"name":"三明市"},{"id":1329,"name":"莆田市"},{"id":1332,"name":"泉州市"},{"id":1341,"name":"漳州市"},{"id":1352,"name":"南平市"},{"id":1362,"name":"龙岩市"},{"id":1370,"name":"宁德市"}],"17":[{"id":1432,"name":"孝感市"},{"id":1441,"name":"黄冈市"},{"id":1458,"name":"咸宁市"},{"id":1466,"name":"恩施州"},{"id":1475,"name":"鄂州市"},{"id":1477,"name":"荆门市"},{"id":1479,"name":"随州市"},{"id":3154,"name":"神农架林区"},{"id":1381,"name":"武汉市"},{"id":1387,"name":"黄石市"},{"id":1396,"name":"襄阳市"},{"id":1405,"name":"十堰市"},{"id":1413,"name":"荆州市"},{"id":1421,"name":"宜昌市"},{"id":2922,"name":"潜江市"},{"id":2980,"name":"天门市"},{"id":2983,"name":"仙桃市"}],"18":[{"id":4250,"name":"耒阳市"},{"id":1482,"name":"长沙市"},{"id":1488,"name":"株洲市"},{"id":1495,"name":"湘潭市"},{"id":1499,"name":"韶山市"},{"id":1501,"name":"衡阳市"},{"id":1511,"name":"邵阳市"},{"id":1522,"name":"岳阳市"},{"id":1530,"name":"常德市"},{"id":1540,"name":"张家界市"},{"id":1544,"name":"郴州市"},{"id":1555,"name":"益阳市"},{"id":1560,"name":"永州市"},{"id":1574,"name":"怀化市"},{"id":1586,"name":"娄底市"},{"id":1592,"name":"湘西州"}],"19":[{"id":1601,"name":"广州市"},{"id":1607,"name":"深圳市"},{"id":1609,"name":"珠海市"},{"id":1611,"name":"汕头市"},{"id":1617,"name":"韶关市"},{"id":1627,"name":"河源市"},{"id":1634,"name":"梅州市"},{"id":1709,"name":"揭阳市"},{"id":1643,"name":"惠州市"},{"id":1650,"name":"汕尾市"},{"id":1655,"name":"东莞市"},{"id":1657,"name":"中山市"},{"id":1659,"name":"江门市"},{"id":1666,"name":"佛山市"},{"id":1672,"name":"阳江市"},{"id":1677,"name":"湛江市"},{"id":1684,"name":"茂名市"},{"id":1690,"name":"肇庆市"},{"id":1698,"name":"云浮市"},{"id":1704,"name":"清远市"},{"id":1705,"name":"潮州市"}],"20":[{"id":3168,"name":"崇左市"},{"id":1715,"name":"南宁市"},{"id":1720,"name":"柳州市"},{"id":1726,"name":"桂林市"},{"id":1740,"name":"梧州市"},{"id":1746,"name":"北海市"},{"id":1749,"name":"防城港市"},{"id":1753,"name":"钦州市"},{"id":1757,"name":"贵港市"},{"id":1761,"name":"玉林市"},{"id":1792,"name":"贺州市"},{"id":1806,"name":"百色市"},{"id":1818,"name":"河池市"},{"id":3044,"name":"来宾市"}],"21":[{"id":1827,"name":"南昌市"},{"id":1832,"name":"景德镇市"},{"id":1836,"name":"萍乡市"},{"id":1842,"name":"新余市"},{"id":1845,"name":"九江市"},{"id":1857,"name":"鹰潭市"},{"id":1861,"name":"上饶市"},{"id":1874,"name":"宜春市"},{"id":1885,"name":"抚州市"},{"id":1898,"name":"吉安市"},{"id":1911,"name":"赣州市"}],"22":[{"id":2103,"name":"凉山州"},{"id":1930,"name":"成都市"},{"id":1946,"name":"自贡市"},{"id":1950,"name":"攀枝花市"},{"id":1954,"name":"泸州市"},{"id":1960,"name":"绵阳市"},{"id":1962,"name":"德阳市"},{"id":1977,"name":"广元市"},{"id":1983,"name":"遂宁市"},{"id":1988,"name":"内江市"},{"id":1993,"name":"乐山市"},{"id":2005,"name":"宜宾市"},{"id":2016,"name":"广安市"},{"id":2022,"name":"南充市"},{"id":2033,"name":"达州市"},{"id":2042,"name":"巴中市"},{"id":2047,"name":"雅安市"},{"id":2058,"name":"眉山市"},{"id":2065,"name":"资阳市"},{"id":2070,"name":"阿坝州"},{"id":2084,"name":"甘孜州"}],"23":[{"id":3690,"name":"三亚市"},{"id":3698,"name":"文昌市"},{"id":3699,"name":"五指山市"},{"id":3701,"name":"临高县"},{"id":3702,"name":"澄迈县"},{"id":3703,"name":"定安县"},{"id":3704,"name":"屯昌县"},{"id":3705,"name":"昌江县"},{"id":3706,"name":"白沙县"},{"id":3707,"name":"琼中县"},{"id":3708,"name":"陵水县"},{"id":3709,"name":"保亭县"},{"id":3710,"name":"乐东县"},{"id":3711,"name":"三沙市"},{"id":2121,"name":"海口市"},{"id":3115,"name":"琼海市"},{"id":3137,"name":"万宁市"},{"id":3173,"name":"东方市"},{"id":3034,"name":"儋州市"}],"24":[{"id":2144,"name":"贵阳市"},{"id":2150,"name":"六盘水市"},{"id":2155,"name":"遵义市"},{"id":2169,"name":"铜仁市"},{"id":2180,"name":"毕节市"},{"id":2189,"name":"安顺市"},{"id":2196,"name":"黔西南州"},{"id":2205,"name":"黔东南州"},{"id":2222,"name":"黔南州"}],"25":[{"id":4108,"name":"迪庆州"},{"id":2235,"name":"昆明市"},{"id":2247,"name":"曲靖市"},{"id":2258,"name":"玉溪市"},{"id":2270,"name":"昭通市"},{"id":2281,"name":"普洱市"},{"id":2291,"name":"临沧市"},{"id":2298,"name":"保山市"},{"id":2304,"name":"丽江市"},{"id":2309,"name":"文山州"},{"id":2318,"name":"红河州"},{"id":2332,"name":"西双版纳州"},{"id":2336,"name":"楚雄州"},{"id":2347,"name":"大理州"},{"id":2360,"name":"德宏州"},{"id":2366,"name":"怒江州"}],"26":[{"id":3970,"name":"阿里地区"},{"id":3971,"name":"林芝地区"},{"id":2951,"name":"拉萨市"},{"id":3107,"name":"那曲地区"},{"id":3129,"name":"山南地区"},{"id":3138,"name":"昌都地区"},{"id":3144,"name":"日喀则地区"}],"27":[{"id":2428,"name":"延安市"},{"id":2442,"name":"汉中市"},{"id":2454,"name":"榆林市"},{"id":2468,"name":"商洛市"},{"id":2476,"name":"安康市"},{"id":2376,"name":"西安市"},{"id":2386,"name":"铜川市"},{"id":2390,"name":"宝鸡市"},{"id":2402,"name":"咸阳市"},{"id":2416,"name":"渭南市"}],"28":[{"id":2525,"name":"庆阳市"},{"id":2534,"name":"陇南市"},{"id":2544,"name":"武威市"},{"id":2549,"name":"张掖市"},{"id":2556,"name":"酒泉市"},{"id":2564,"name":"甘南州"},{"id":2573,"name":"临夏州"},{"id":3080,"name":"定西市"},{"id":2487,"name":"兰州市"},{"id":2492,"name":"金昌市"},{"id":2495,"name":"白银市"},{"id":2501,"name":"天水市"},{"id":2509,"name":"嘉峪关市"},{"id":2518,"name":"平凉市"}],"29":[{"id":2580,"name":"西宁市"},{"id":2585,"name":"海东地区"},{"id":2592,"name":"海北州"},{"id":2597,"name":"黄南州"},{"id":2603,"name":"海南州"},{"id":2605,"name":"果洛州"},{"id":2612,"name":"玉树州"},{"id":2620,"name":"海西州"}],"30":[{"id":2628,"name":"银川市"},{"id":2632,"name":"石嘴山市"},{"id":2637,"name":"吴忠市"},{"id":2644,"name":"固原市"},{"id":3071,"name":"中卫市"}],"31":[{"id":4110,"name":"五家渠市"},{"id":4163,"name":"博尔塔拉蒙古自治州阿拉山口口岸"},{"id":15945,"name":"阿拉尔市"},{"id":15946,"name":"图木舒克市"},{"id":2652,"name":"乌鲁木齐市"},{"id":2654,"name":"克拉玛依市"},{"id":2656,"name":"石河子市"},{"id":2658,"name":"吐鲁番地区"},{"id":2662,"name":"哈密地区"},{"id":2666,"name":"和田地区"},{"id":2675,"name":"阿克苏地区"},{"id":2686,"name":"喀什地区"},{"id":2699,"name":"克孜勒苏州"},{"id":2704,"name":"巴音郭楞州"},{"id":2714,"name":"昌吉州"},{"id":2723,"name":"博尔塔拉州"},{"id":2727,"name":"伊犁州"},{"id":2736,"name":"塔城地区"},{"id":2744,"name":"阿勒泰地区"}],"32":[{"id":2768,"name":"台湾市"}],"42":[{"id":2754,"name":"香港特别行政区"}],"43":[{"id":2770,"name":"澳门市"}],"84":[{"id":1310,"name":"钓鱼岛"}]};
+    var selectedProvinceId,selectedCityId,selectedAreaId,selectedProvinceId,selectedCityName,selectedAreaName;
+    var urlArr = (location.href.split(".html")[0]).split("-");
+
+    function getAreaStoreUrl(areaId){
+        urlArr[14] = selectedProvinceId;
+        urlArr[15] = selectedCityId;
+        urlArr[16] = areaId;
+
+        if(paras[1]==794||paras[1]==6880||paras[2]==655){
+            urlArr[17] = "33";
+        }
+
+        var url = urlArr.join('-');
+
+        url += ".html";
+
+        return url;
+    }
+
+    function selectStoreTab(index) {
+        if(index == 0) {
+            $('dl.store div.mt li').eq(0).find('em').text('请选择');
+            $('dl.store div.mt li').eq(1).addClass('hide').find('em').text("请选择");
+            $('dl.store div.mt li').eq(2).addClass('hide').find('em').text("请选择");;
+            $('dl.store [data-widget=tab-item]').eq(0).addClass('curr');
+            $('dl.store [data-area="0"]').removeClass('hide');
+            $('dl.store [data-area="1"]').addClass('hide');
+            $('dl.store [data-area="2"]').addClass('hide');
+
+        } else if(index == 1) {
+            $('dl.store [data-widget=tab-item]').eq(1).addClass('curr').find('em').text('请选择');
+
+            $('dl.store [data-area="1"]').removeClass('hide');
+
+            $('dl.store div.mt li').eq(2).addClass('hide').find('em').text('请选择');
+            $('dl.store [data-area="2"]').addClass('hide');
+
+        } else if(index == 2) {
+        }
+    }
+
+    function getAreaList_callback(data){
+        $('dl.store div[data-area="1"]').addClass('hide');
+        $('dl.store div[data-area="2"]').removeClass('hide');
+        $('dl.store div[data-area="2"] p.ac').addClass('hide');
+
+
+        var thirdTabPanel = $('dl.store div.mc[data-area="2"] ul').empty();
+        var areaStr="",
+            areaLongStr="",
+            areaLongerStr="";
+
+        for(var i = 0;i < data.length; i++){
+            var item = data[i];
+            var name = item['name'];
+            var url = getAreaStoreUrl(item['id']);
+            if(name.length <= 5){
+                areaStr += "<li><a data-value='" + item['id'] + "' href='" + url + "'>" + item['name'] + "</a></li>";
+            }else if(name.length <= 11){
+                areaLongStr += "<li class='long-area'><a data-value='" + item['id'] + "' href='" + url + "'>" + item['name'] + "</a></li>";
+            } else  {
+                areaLongerStr += "<li class='longer-area'><a data-value='" + item['id'] + "' href='" + url + "'>" + item['name'] + "</a></li>";
+            }
+        }
+
+        thirdTabPanel.append(areaStr + areaLongStr + areaLongerStr);
+    }
+
+
+    function selectProvince(parentId,name){
+
+        selectedProvinceId = parentId;
+        $('dl.store [data-widget=tab-item]').eq(0).removeClass('curr');
+        $('dl.store [data-widget=tab-item]').eq(0).find('em').text(name);
+        $('dl.store [data-widget=tab-item]').eq(1).removeClass('hide').addClass('curr');
+        $('dl.store [data-area="0"]').addClass('hide');
+        $('dl.store [data-area="1"]').removeClass('hide');
+        $('dl.store [data-area="1"] p.ac').addClass('hide');
+
+
+        var secondTabPanel = $('dl.store div.mc[data-area="1"] ul').empty();
+        var thirdTabPanel = $('dl.store div.mc[data-area="2"] ul').empty();
+        $('dl.store [data-area="2"] p.ac').removeClass('hide');
+
+
+        var selectCityArray = provinceCityJson[parentId];
+        var areaStr="",
+            areaLongStr="",
+            areaLongerStr="";
+        for (var i=0; i < selectCityArray.length; i++) {
+            var name = selectCityArray[i]['name'];
+            var id = selectCityArray[i]['id'];
+
+            if(name.length <= 5){
+                areaStr += "<li><a data-value='" + id + "' href='#none' onclick='selectCity(" + id + ",\"" + name + "\")'>" + name + "</a></li>";
+            } else if( name.length <= 11 ) {
+                areaLongStr += "<li class='long-area'><a data-value='" + id + "' onclick='selectCity(" + id +  ",\"" + name + "\")' href='#none'>" + name + "</a></li>";
+            }else {
+                areaLongerStr += "<li class='longer-area'><a data-value='" + id + "' onclick='selectCity(" + id +  ",\"" + name + "\")' href='#none'>" + name + "</a></li>";
+            }
+        }
+
+        secondTabPanel.append(areaStr + areaLongStr + areaLongerStr);
+    }
+
+    function selectCity(parentId,name) {
+        selectedCityId = parentId;
+
+        $('dl.store [data-widget=tab-item]').eq(1).removeClass('curr');
+        $('dl.store [data-widget=tab-item]').eq(1).find('em').text(name);
+        $('dl.store [data-widget=tab-item]').eq(2).removeClass('hide').addClass('curr');
+
+
+
+
+        $.ajax({
+            url:'http://d.360buy.com/area/get?fid=' + parentId + '&callback=getAreaList_callback',
+            dataType:'jsonp'
+        });
+    }
+
+
+    function getAreaName_callback(data){
+        for(var i = 0;i < data.length; i++){
+            var item = data[i];
+            if(item['id'] == selectedAreaId) {
+                selectedAreaName = item['name'];
+                break;
+            }
+
+        }
+        $('dl.store [data-widget=tab-item]').eq(2).find('em').text(selectedAreaName);
+
+        if(selectedProvinceName&&selectedCityName&&selectedAreaName){
+            $('#store-selector div.text').text(selectedProvinceName+selectedCityName+selectedAreaName);
+        } else {
+
+            jd.plist.cookieEditer.setCookie("ipLoc-djd", "1-72-4137",30, "/", domainName, false);
+
+            window.location = urlArr[0]+"-"+urlArr[1]+"-"+ urlArr[2]+".html";
+        }
+
+    }
+
+
+    (function(){
+
+        $('#store-selector div.text').bind('mouseover',function(){
+           $('#store-selector').addClass('hover');
+        });
+
+        $('body').click(function(g) {
+            var d = g.srcElement || g.target,
+                    connectDom = [$('#store-selector').get(0)];
+            while (d) {
+                for (var f = 0; f < connectDom.length; f++) {
+                    if (d == connectDom[f]) {
+                        return
+                    }
+                }
+                if (d === document.body) {
+                    $('#store-selector').removeClass('hover');
+                    return
+                }
+                d = d.parentNode;
+            }
+        })
+
+        var iplocation = {"1": { name: "北京", root: 0, djd: 1,c:72 },"2": { name: "上海", root: 1, djd: 1,c:78 },"3": { name: "天津", root: 0, djd: 1,c:51035 },"4": { name: "重庆", root: 3, djd: 1,c:113 },"5": { name: "河北", root: 0, djd: 1,c:142 },
+            "6": { name: "山西", root: 0, djd: 1,c:303 },"7": { name: "河南", root: 0, djd: 1,c:412 },"8": { name: "辽宁", root: 0, djd: 1,c:560 },"9": { name: "吉林", root: 0, djd: 1,c:639 },"10": { name: "黑龙江", root: 0, djd: 1,c:698 },
+            "11": { name: "内蒙古", root: 0, djd: 0,c:799 },"12": { name: "江苏", root: 1, djd: 1,c:904 },"13": { name: "山东", root: 0, djd: 1,c:1000 },"14": { name: "安徽", root: 1, djd: 1,c:1116 },"15": { name: "浙江", root: 1, djd: 1,c:1158 },
+            "16": { name: "福建", root: 2, djd: 1,c:1303 },"17": { name: "湖北", root: 0, djd: 1,c:1381 },"18": { name: "湖南", root: 2, djd: 1,c:1482 },"19": { name: "广东", root: 2, djd: 1,c:1601 },"20": { name: "广西", root: 2, djd: 1,c:1715 },
+            "21": { name: "江西", root: 2, djd: 1,c:1827 },"22": { name: "四川", root: 3, djd: 1,c:1930 },"23": { name: "海南", root: 2, djd: 1,c:2121 },"24": { name: "贵州", root: 3, djd: 1,c:2144 },"25": { name: "云南", root: 3, djd: 1,c:2235 },
+            "26": { name: "西藏", root: 3, djd: 0,c:2951 },"27": { name: "陕西", root: 3, djd: 1,c:2376 },"28": { name: "甘肃", root: 3, djd: 1,c:2487 },"29": { name: "青海", root: 3, djd: 0,c:2580 },"30": { name: "宁夏", root: 3, djd: 1,c:2628 },
+            "31": { name: "新疆", root: 3, djd: 0,c:2652 },"32": { name: "台湾", root: 2, djd: 0,c:2768 },"42": { name: "香港", root: 2, djd: 0,c:2754 },"43": { name: "澳门", root: 2, djd: 0,c:2770 },"84": { name: "钓鱼岛", root: 2, djd: 0,c:84 }};
+        var provinceCityJson = {"1":[{"id":72,"name":"朝阳区"},{"id":2800,"name":"海淀区"},{"id":2801,"name":"西城区"},{"id":2802,"name":"东城区"},{"id":2803,"name":"崇文区"},{"id":2804,"name":"宣武区"},{"id":2805,"name":"丰台区"},{"id":2806,"name":"石景山区"},{"id":2807,"name":"门头沟"},{"id":2808,"name":"房山区"},{"id":2809,"name":"通州区"},{"id":2810,"name":"大兴区"},{"id":2812,"name":"顺义区"},{"id":2814,"name":"怀柔区"},{"id":2816,"name":"密云区"},{"id":2901,"name":"昌平区"},{"id":2953,"name":"平谷区"},{"id":3065,"name":"延庆县"}],"2":[{"id":2811,"name":"卢湾区"},{"id":2813,"name":"徐汇区"},{"id":2815,"name":"长宁区"},{"id":2817,"name":"静安区"},{"id":2820,"name":"闸北区"},{"id":2822,"name":"虹口区"},{"id":2823,"name":"杨浦区"},{"id":2824,"name":"宝山区"},{"id":2825,"name":"闵行区"},{"id":2826,"name":"嘉定区"},{"id":2830,"name":"浦东新区"},{"id":2833,"name":"青浦区"},{"id":2834,"name":"松江区"},{"id":2835,"name":"金山区"},{"id":2836,"name":"南汇区"},{"id":2837,"name":"奉贤区"},{"id":2841,"name":"普陀区"},{"id":2919,"name":"崇明县"},{"id":78,"name":"黄浦区"}],"3":[{"id":51035,"name":"东丽区"},{"id":51036,"name":"和平区"},{"id":51037,"name":"河北区"},{"id":51038,"name":"河东区"},{"id":51039,"name":"河西区"},{"id":51040,"name":"红桥区"},{"id":51041,"name":"蓟县"},{"id":51042,"name":"静海县"},{"id":51043,"name":"南开区"},{"id":51044,"name":"塘沽区"},{"id":51045,"name":"西青区"},{"id":51046,"name":"武清区"},{"id":51047,"name":"津南区"},{"id":51048,"name":"汉沽区"},{"id":51049,"name":"大港区"},{"id":51050,"name":"北辰区"},{"id":51051,"name":"宝坻区"},{"id":51052,"name":"宁河县"}],"4":[{"id":113,"name":"万州区"},{"id":114,"name":"涪陵区"},{"id":115,"name":"梁平县"},{"id":119,"name":"南川区"},{"id":123,"name":"潼南县"},{"id":126,"name":"大足区"},{"id":128,"name":"黔江区"},{"id":129,"name":"武隆县"},{"id":130,"name":"丰都县"},{"id":131,"name":"奉节县"},{"id":132,"name":"开县"},{"id":133,"name":"云阳县"},{"id":134,"name":"忠县"},{"id":135,"name":"巫溪县"},{"id":136,"name":"巫山县"},{"id":137,"name":"石柱县"},{"id":138,"name":"彭水县"},{"id":139,"name":"垫江县"},{"id":140,"name":"酉阳县"},{"id":141,"name":"秀山县"},{"id":48131,"name":"璧山县"},{"id":48132,"name":"荣昌县"},{"id":48133,"name":"铜梁县"},{"id":48201,"name":"合川区"},{"id":48202,"name":"巴南区"},{"id":48203,"name":"北碚区"},{"id":48204,"name":"江津区"},{"id":48205,"name":"渝北区"},{"id":48206,"name":"长寿区"},{"id":48207,"name":"永川区"},{"id":50950,"name":"江北区"},{"id":50951,"name":"南岸区"},{"id":50952,"name":"九龙坡区"},{"id":50953,"name":"沙坪坝区"},{"id":50954,"name":"大渡口区"},{"id":50995,"name":"綦江区"},{"id":51026,"name":"渝中区"},{"id":51027,"name":"高新区"},{"id":51028,"name":"北部新区"},{"id":4164,"name":"城口县"},{"id":3076,"name":"高新区"}],"5":[{"id":142,"name":"石家庄市"},{"id":148,"name":"邯郸市"},{"id":164,"name":"邢台市"},{"id":199,"name":"保定市"},{"id":224,"name":"张家口市"},{"id":239,"name":"承德市"},{"id":248,"name":"秦皇岛市"},{"id":258,"name":"唐山市"},{"id":264,"name":"沧州市"},{"id":274,"name":"廊坊市"},{"id":275,"name":"衡水市"}],"6":[{"id":303,"name":"太原市"},{"id":309,"name":"大同市"},{"id":318,"name":"阳泉市"},{"id":325,"name":"晋城市"},{"id":330,"name":"朔州市"},{"id":336,"name":"晋中市"},{"id":350,"name":"忻州市"},{"id":368,"name":"吕梁市"},{"id":379,"name":"临汾市"},{"id":398,"name":"运城市"},{"id":3074,"name":"长治市"}],"7":[{"id":412,"name":"郑州市"},{"id":420,"name":"开封市"},{"id":427,"name":"洛阳市"},{"id":438,"name":"平顶山市"},{"id":446,"name":"焦作市"},{"id":454,"name":"鹤壁市"},{"id":458,"name":"新乡市"},{"id":468,"name":"安阳市"},{"id":475,"name":"濮阳市"},{"id":482,"name":"许昌市"},{"id":489,"name":"漯河市"},{"id":495,"name":"三门峡市"},{"id":502,"name":"南阳市"},{"id":517,"name":"商丘市"},{"id":527,"name":"周口市"},{"id":538,"name":"驻马店市"},{"id":549,"name":"信阳市"},{"id":2780,"name":"济源市"}],"8":[{"id":560,"name":"沈阳市"},{"id":573,"name":"大连市"},{"id":579,"name":"鞍山市"},{"id":584,"name":"抚顺市"},{"id":589,"name":"本溪市"},{"id":593,"name":"丹东市"},{"id":598,"name":"锦州市"},{"id":604,"name":"葫芦岛市"},{"id":609,"name":"营口市"},{"id":613,"name":"盘锦市"},{"id":617,"name":"阜新市"},{"id":621,"name":"辽阳市"},{"id":632,"name":"朝阳市"},{"id":6858,"name":"铁岭市"}],"9":[{"id":639,"name":"长春市"},{"id":644,"name":"吉林市"},{"id":651,"name":"四平市"},{"id":2992,"name":"辽源市"},{"id":657,"name":"通化市"},{"id":664,"name":"白山市"},{"id":674,"name":"松原市"},{"id":681,"name":"白城市"},{"id":687,"name":"延边州"}],"10":[{"id":727,"name":"鹤岗市"},{"id":731,"name":"双鸭山市"},{"id":737,"name":"鸡西市"},{"id":742,"name":"大庆市"},{"id":753,"name":"伊春市"},{"id":757,"name":"牡丹江市"},{"id":765,"name":"佳木斯市"},{"id":773,"name":"七台河市"},{"id":776,"name":"黑河市"},{"id":782,"name":"绥化市"},{"id":793,"name":"大兴安岭地区"},{"id":698,"name":"哈尔滨市"},{"id":712,"name":"齐齐哈尔市"}],"11":[{"id":799,"name":"呼和浩特市"},{"id":805,"name":"包头市"},{"id":810,"name":"乌海市"},{"id":812,"name":"赤峰市"},{"id":823,"name":"乌兰察布市"},{"id":835,"name":"锡林郭勒盟"},{"id":848,"name":"呼伦贝尔市"},{"id":870,"name":"鄂尔多斯市"},{"id":880,"name":"巴彦淖尔市"},{"id":891,"name":"阿拉善盟"},{"id":895,"name":"兴安盟"},{"id":902,"name":"通辽市"}],"12":[{"id":904,"name":"南京市"},{"id":911,"name":"徐州市"},{"id":919,"name":"连云港市"},{"id":925,"name":"淮安市"},{"id":933,"name":"宿迁市"},{"id":939,"name":"盐城市"},{"id":951,"name":"扬州市"},{"id":959,"name":"泰州市"},{"id":965,"name":"南通市"},{"id":972,"name":"镇江市"},{"id":978,"name":"常州市"},{"id":984,"name":"无锡市"},{"id":988,"name":"苏州市"}],"13":[{"id":2900,"name":"济宁市"},{"id":1000,"name":"济南市"},{"id":1007,"name":"青岛市"},{"id":1016,"name":"淄博市"},{"id":1022,"name":"枣庄市"},{"id":1025,"name":"东营市"},{"id":1032,"name":"潍坊市"},{"id":1042,"name":"烟台市"},{"id":1053,"name":"威海市"},{"id":1058,"name":"莱芜市"},{"id":1060,"name":"德州市"},{"id":1072,"name":"临沂市"},{"id":1081,"name":"聊城市"},{"id":1090,"name":"滨州市"},{"id":1099,"name":"菏泽市"},{"id":1108,"name":"日照市"},{"id":1112,"name":"泰安市"}],"14":[{"id":1151,"name":"黄山市"},{"id":1159,"name":"滁州市"},{"id":1167,"name":"阜阳市"},{"id":1174,"name":"亳州市"},{"id":1180,"name":"宿州市"},{"id":1201,"name":"池州市"},{"id":1206,"name":"六安市"},{"id":2971,"name":"宣城市"},{"id":1114,"name":"铜陵市"},{"id":1116,"name":"合肥市"},{"id":1121,"name":"淮南市"},{"id":1124,"name":"淮北市"},{"id":1127,"name":"芜湖市"},{"id":1132,"name":"蚌埠市"},{"id":1137,"name":"马鞍山市"},{"id":1140,"name":"安庆市"}],"15":[{"id":1158,"name":"宁波市"},{"id":1273,"name":"衢州市"},{"id":1280,"name":"丽水市"},{"id":1290,"name":"台州市"},{"id":1298,"name":"舟山市"},{"id":1213,"name":"杭州市"},{"id":1233,"name":"温州市"},{"id":1243,"name":"嘉兴市"},{"id":1250,"name":"湖州市"},{"id":1255,"name":"绍兴市"},{"id":1262,"name":"金华市"}],"16":[{"id":1303,"name":"福州市"},{"id":1315,"name":"厦门市"},{"id":1317,"name":"三明市"},{"id":1329,"name":"莆田市"},{"id":1332,"name":"泉州市"},{"id":1341,"name":"漳州市"},{"id":1352,"name":"南平市"},{"id":1362,"name":"龙岩市"},{"id":1370,"name":"宁德市"}],"17":[{"id":1432,"name":"孝感市"},{"id":1441,"name":"黄冈市"},{"id":1458,"name":"咸宁市"},{"id":1466,"name":"恩施州"},{"id":1475,"name":"鄂州市"},{"id":1477,"name":"荆门市"},{"id":1479,"name":"随州市"},{"id":3154,"name":"神农架林区"},{"id":1381,"name":"武汉市"},{"id":1387,"name":"黄石市"},{"id":1396,"name":"襄阳市"},{"id":1405,"name":"十堰市"},{"id":1413,"name":"荆州市"},{"id":1421,"name":"宜昌市"},{"id":2922,"name":"潜江市"},{"id":2980,"name":"天门市"},{"id":2983,"name":"仙桃市"}],"18":[{"id":4250,"name":"耒阳市"},{"id":1482,"name":"长沙市"},{"id":1488,"name":"株洲市"},{"id":1495,"name":"湘潭市"},{"id":1499,"name":"韶山市"},{"id":1501,"name":"衡阳市"},{"id":1511,"name":"邵阳市"},{"id":1522,"name":"岳阳市"},{"id":1530,"name":"常德市"},{"id":1540,"name":"张家界市"},{"id":1544,"name":"郴州市"},{"id":1555,"name":"益阳市"},{"id":1560,"name":"永州市"},{"id":1574,"name":"怀化市"},{"id":1586,"name":"娄底市"},{"id":1592,"name":"湘西州"}],"19":[{"id":1601,"name":"广州市"},{"id":1607,"name":"深圳市"},{"id":1609,"name":"珠海市"},{"id":1611,"name":"汕头市"},{"id":1617,"name":"韶关市"},{"id":1627,"name":"河源市"},{"id":1634,"name":"梅州市"},{"id":1709,"name":"揭阳市"},{"id":1643,"name":"惠州市"},{"id":1650,"name":"汕尾市"},{"id":1655,"name":"东莞市"},{"id":1657,"name":"中山市"},{"id":1659,"name":"江门市"},{"id":1666,"name":"佛山市"},{"id":1672,"name":"阳江市"},{"id":1677,"name":"湛江市"},{"id":1684,"name":"茂名市"},{"id":1690,"name":"肇庆市"},{"id":1698,"name":"云浮市"},{"id":1704,"name":"清远市"},{"id":1705,"name":"潮州市"}],"20":[{"id":3168,"name":"崇左市"},{"id":1715,"name":"南宁市"},{"id":1720,"name":"柳州市"},{"id":1726,"name":"桂林市"},{"id":1740,"name":"梧州市"},{"id":1746,"name":"北海市"},{"id":1749,"name":"防城港市"},{"id":1753,"name":"钦州市"},{"id":1757,"name":"贵港市"},{"id":1761,"name":"玉林市"},{"id":1792,"name":"贺州市"},{"id":1806,"name":"百色市"},{"id":1818,"name":"河池市"},{"id":3044,"name":"来宾市"}],"21":[{"id":1827,"name":"南昌市"},{"id":1832,"name":"景德镇市"},{"id":1836,"name":"萍乡市"},{"id":1842,"name":"新余市"},{"id":1845,"name":"九江市"},{"id":1857,"name":"鹰潭市"},{"id":1861,"name":"上饶市"},{"id":1874,"name":"宜春市"},{"id":1885,"name":"抚州市"},{"id":1898,"name":"吉安市"},{"id":1911,"name":"赣州市"}],"22":[{"id":2103,"name":"凉山州"},{"id":1930,"name":"成都市"},{"id":1946,"name":"自贡市"},{"id":1950,"name":"攀枝花市"},{"id":1954,"name":"泸州市"},{"id":1960,"name":"绵阳市"},{"id":1962,"name":"德阳市"},{"id":1977,"name":"广元市"},{"id":1983,"name":"遂宁市"},{"id":1988,"name":"内江市"},{"id":1993,"name":"乐山市"},{"id":2005,"name":"宜宾市"},{"id":2016,"name":"广安市"},{"id":2022,"name":"南充市"},{"id":2033,"name":"达州市"},{"id":2042,"name":"巴中市"},{"id":2047,"name":"雅安市"},{"id":2058,"name":"眉山市"},{"id":2065,"name":"资阳市"},{"id":2070,"name":"阿坝州"},{"id":2084,"name":"甘孜州"}],"23":[{"id":3690,"name":"三亚市"},{"id":3698,"name":"文昌市"},{"id":3699,"name":"五指山市"},{"id":3701,"name":"临高县"},{"id":3702,"name":"澄迈县"},{"id":3703,"name":"定安县"},{"id":3704,"name":"屯昌县"},{"id":3705,"name":"昌江县"},{"id":3706,"name":"白沙县"},{"id":3707,"name":"琼中县"},{"id":3708,"name":"陵水县"},{"id":3709,"name":"保亭县"},{"id":3710,"name":"乐东县"},{"id":3711,"name":"三沙市"},{"id":2121,"name":"海口市"},{"id":3115,"name":"琼海市"},{"id":3137,"name":"万宁市"},{"id":3173,"name":"东方市"},{"id":3034,"name":"儋州市"}],"24":[{"id":2144,"name":"贵阳市"},{"id":2150,"name":"六盘水市"},{"id":2155,"name":"遵义市"},{"id":2169,"name":"铜仁市"},{"id":2180,"name":"毕节市"},{"id":2189,"name":"安顺市"},{"id":2196,"name":"黔西南州"},{"id":2205,"name":"黔东南州"},{"id":2222,"name":"黔南州"}],"25":[{"id":4108,"name":"迪庆州"},{"id":2235,"name":"昆明市"},{"id":2247,"name":"曲靖市"},{"id":2258,"name":"玉溪市"},{"id":2270,"name":"昭通市"},{"id":2281,"name":"普洱市"},{"id":2291,"name":"临沧市"},{"id":2298,"name":"保山市"},{"id":2304,"name":"丽江市"},{"id":2309,"name":"文山州"},{"id":2318,"name":"红河州"},{"id":2332,"name":"西双版纳州"},{"id":2336,"name":"楚雄州"},{"id":2347,"name":"大理州"},{"id":2360,"name":"德宏州"},{"id":2366,"name":"怒江州"}],"26":[{"id":3970,"name":"阿里地区"},{"id":3971,"name":"林芝地区"},{"id":2951,"name":"拉萨市"},{"id":3107,"name":"那曲地区"},{"id":3129,"name":"山南地区"},{"id":3138,"name":"昌都地区"},{"id":3144,"name":"日喀则地区"}],"27":[{"id":2428,"name":"延安市"},{"id":2442,"name":"汉中市"},{"id":2454,"name":"榆林市"},{"id":2468,"name":"商洛市"},{"id":2476,"name":"安康市"},{"id":2376,"name":"西安市"},{"id":2386,"name":"铜川市"},{"id":2390,"name":"宝鸡市"},{"id":2402,"name":"咸阳市"},{"id":2416,"name":"渭南市"}],"28":[{"id":2525,"name":"庆阳市"},{"id":2534,"name":"陇南市"},{"id":2544,"name":"武威市"},{"id":2549,"name":"张掖市"},{"id":2556,"name":"酒泉市"},{"id":2564,"name":"甘南州"},{"id":2573,"name":"临夏州"},{"id":3080,"name":"定西市"},{"id":2487,"name":"兰州市"},{"id":2492,"name":"金昌市"},{"id":2495,"name":"白银市"},{"id":2501,"name":"天水市"},{"id":2509,"name":"嘉峪关市"},{"id":2518,"name":"平凉市"}],"29":[{"id":2580,"name":"西宁市"},{"id":2585,"name":"海东地区"},{"id":2592,"name":"海北州"},{"id":2597,"name":"黄南州"},{"id":2603,"name":"海南州"},{"id":2605,"name":"果洛州"},{"id":2612,"name":"玉树州"},{"id":2620,"name":"海西州"}],"30":[{"id":2628,"name":"银川市"},{"id":2632,"name":"石嘴山市"},{"id":2637,"name":"吴忠市"},{"id":2644,"name":"固原市"},{"id":3071,"name":"中卫市"}],"31":[{"id":4110,"name":"五家渠市"},{"id":4163,"name":"博尔塔拉蒙古自治州阿拉山口口岸"},{"id":15945,"name":"阿拉尔市"},{"id":15946,"name":"图木舒克市"},{"id":2652,"name":"乌鲁木齐市"},{"id":2654,"name":"克拉玛依市"},{"id":2656,"name":"石河子市"},{"id":2658,"name":"吐鲁番地区"},{"id":2662,"name":"哈密地区"},{"id":2666,"name":"和田地区"},{"id":2675,"name":"阿克苏地区"},{"id":2686,"name":"喀什地区"},{"id":2699,"name":"克孜勒苏州"},{"id":2704,"name":"巴音郭楞州"},{"id":2714,"name":"昌吉州"},{"id":2723,"name":"博尔塔拉州"},{"id":2727,"name":"伊犁州"},{"id":2736,"name":"塔城地区"},{"id":2744,"name":"阿勒泰地区"}],"32":[{"id":2768,"name":"台湾市"}],"42":[{"id":2754,"name":"香港特别行政区"}],"43":[{"id":2770,"name":"澳门市"}],"84":[{"id":1310,"name":"钓鱼岛"}]};
+
+        if(urlArr[14]&&urlArr[15]&&urlArr[16]&&urlArr[14]!=0&&urlArr[15]!=0&&urlArr[16]!=0){
+            selectedProvinceId = urlArr[14];
+            selectedCityId = urlArr[15];
+            selectedAreaId = urlArr[16];
+            selectedProvinceName = iplocation[selectedProvinceId]['name'];
+
+
+
+            var citysInProvince = provinceCityJson[selectedProvinceId];
+            for(var i = 0; i < citysInProvince.length; i++) {
+                if(selectedCityId == citysInProvince[i]['id']) {
+                    selectedCityName =  citysInProvince[i]['name'];
+                    break;
+                }
+            }
+
+
+            selectProvince(selectedProvinceId,selectedProvinceName);
+            selectCity(selectedCityId,selectedCityName);
+
+            $.ajax({
+                url:'http://d.360buy.com/area/get?fid=' + selectedCityId + '&callback=getAreaName_callback',
+                dataType:'jsonp'
+            });
+        }
+
+
+
+        var firstTabPanel = $('dl.store div.mc[data-area="0"] ul');
+        for(var id in iplocation) {
+            var name = iplocation[id]['name'];
+            if(name.length <= 4){
+                firstTabPanel.append("<li><a data-value='" + id + "' href='#none' onclick='selectProvince(" + id + ",\"" + name + "\")'>" + name + "</a></li>");
+            } else {
+                firstTabPanel.append("<li class='long-area'><a data-value='" + id + "' onclick='selectProvince(" + id + ",\"" + name + "\")' href='#none'>" + name + "</a></li>");
+            }
+        }
+
+
+    })();
+
+
+
+</script>
+<script  type="text/javascript">
+    (function(){
+        var loc = jd.plist.cookieEditer.getCookie("ipLoc-djd");
+        $.ajax({url:'http://uprofile.jd.com/u/setadds',type:'get',dataType:'jsonp',data:{adds:loc}});
+    })();
+</script>
+<script type="text/javascript" src="http://wl.jd.com/wl.js"></script>
+<script type="text/javascript">
+    var _mvq = _mvq || [];
+    _mvq.push(['$setAccount', 'm-9-1']);
+    _mvq.push(['$logConversion']);
+    (function() {
+        var mvl = document.createElement('script');
+        mvl.type = 'text/javascript'; mvl.async = true;
+        mvl.src = 'http://misc.360buyimg.com/lib/js/2012/mvl.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(mvl, s);
+    })();
+
+    var psid1 = 9987;
+    var psid2 = 653;
+    var psid3 = 655;
+
+    $(function() {
+
+
+        $('div#plist').find('li').bind('click',function(){
+
+            var skuId = $(this).attr('sku')
+            var index = $(this).attr('index');
+            JA && JA.tracker.ngloader('list.010002',{cid1:psid1,cid2:psid2,cid3:psid3,sku:skuId,index:index});
+        });
+
+        JA && JA.tracker.ngloader('list.010001',{cid1:psid1,cid2:psid2,cid3:psid3});
+
+
+    });
+
+</script>
+
+
+
+
+
+</body>
+</html>

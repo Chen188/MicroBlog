@@ -1,0 +1,1232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyBtn.1.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.QualityTools.Testing.Fakes.Delegates.MyBtnDelegates">
+            <summary>包含用于 MyBtn 的存根和填充码的自定义委托</summary>
+        </member>
+        <member name="T:MyBtn.Fakes.ShimMyBtn">
+            <summary>MyBtn.MyBtn 的填充码类型</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.#ctor">
+            <summary>初始化新的填充码实例</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.#ctor(MyBtn.MyBtn)">
+            <summary>初始化给定实例的新填充码</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.BehaveAsCurrent">
+            <summary>为已填充的类型的所有方法分配“Current”行为</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.BehaveAsNotImplemented">
+            <summary>为已填充的类型的所有方法分配“NotImplemented”行为</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.ComponentModel.IComponent)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.ComponentModel.ISynchronizeInvoke)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.Windows.Forms.IBindableComponent)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.Windows.Forms.IContainerControl)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.Windows.Forms.IDropTarget)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.Windows.Forms.IWin32Window)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.ShimMyBtn.Bind(System.IDisposable)">
+            <summary>将接口的成员绑定到此填充码。</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.Behavior">
+            <summary>为已填充的类型的所有方法分配行为</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.CalGraphicPath">
+            <summary>设置 MyBtn.CalGraphicPath() 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.Constructor">
+            <summary>设置 MyBtn.MyBtn() 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.DisposeBoolean">
+            <summary>设置 MyBtn.Dispose(Boolean disposing) 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.InitializeComponent">
+            <summary>设置 MyBtn.InitializeComponent() 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.OnPaintPaintEventArgs">
+            <summary>设置 MyBtn.OnPaint(PaintEventArgs e) 的 填充码</summary>
+        </member>
+        <member name="T:MyBtn.Fakes.ShimMyBtn.AllInstances">
+            <summary>为所有实例成员定义填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.AllInstances.CalGraphicPath">
+            <summary>设置 MyBtn.CalGraphicPath() 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.AllInstances.DisposeBoolean">
+            <summary>设置 MyBtn.Dispose(Boolean disposing) 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.AllInstances.InitializeComponent">
+            <summary>设置 MyBtn.InitializeComponent() 的 填充码</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.ShimMyBtn.AllInstances.OnPaintPaintEventArgs">
+            <summary>设置 MyBtn.OnPaint(PaintEventArgs e) 的 填充码</summary>
+        </member>
+        <member name="T:MyBtn.Fakes.StubMyBtn">
+            <summary>MyBtn.MyBtn 的存根类型</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.#ctor">
+            <summary>初始化新实例</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AdjustFormScrollbars(System.Boolean)">
+            <summary>设置 ContainerControl.AdjustFormScrollbars(Boolean displayScrollbars) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AdjustFormScrollbarsBoolean">
+            <summary>设置 ContainerControl.AdjustFormScrollbars(Boolean displayScrollbars) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AllowDropGet">
+            <summary>设置 Control.get_AllowDrop() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AllowDropSetBoolean">
+            <summary>设置 Control.set_AllowDrop(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AnchorGet">
+            <summary>设置 Control.get_Anchor() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AnchorSetAnchorStyles">
+            <summary>设置 Control.set_Anchor(AnchorStyles value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAllowDrop">
+            <summary>附加委托以将 StubMyBtn.AllowDrop 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAnchor">
+            <summary>附加委托以将 StubMyBtn.Anchor 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAutoScroll">
+            <summary>附加委托以将 StubMyBtn.AutoScroll 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAutoScrollOffset">
+            <summary>附加委托以将 StubMyBtn.AutoScrollOffset 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAutoSize">
+            <summary>附加委托以将 StubMyBtn.AutoSize 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToAutoValidate">
+            <summary>附加委托以将 StubMyBtn.AutoValidate 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToBackColor">
+            <summary>附加委托以将 StubMyBtn.BackColor 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToBackgroundImage">
+            <summary>附加委托以将 StubMyBtn.BackgroundImage 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToBackgroundImageLayout">
+            <summary>附加委托以将 StubMyBtn.BackgroundImageLayout 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToBindingContext">
+            <summary>附加委托以将 StubMyBtn.BindingContext 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToContextMenu">
+            <summary>附加委托以将 StubMyBtn.ContextMenu 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToContextMenuStrip">
+            <summary>附加委托以将 StubMyBtn.ContextMenuStrip 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToCursor">
+            <summary>附加委托以将 StubMyBtn.Cursor 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToDock">
+            <summary>附加委托以将 StubMyBtn.Dock 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToDoubleBuffered">
+            <summary>附加委托以将 StubMyBtn.DoubleBuffered 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToFont">
+            <summary>附加委托以将 StubMyBtn.Font 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToForeColor">
+            <summary>附加委托以将 StubMyBtn.ForeColor 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToImeModeBase">
+            <summary>附加委托以将 StubMyBtn.ImeModeBase 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToMaximumSize">
+            <summary>附加委托以将 StubMyBtn.MaximumSize 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToMinimumSize">
+            <summary>附加委托以将 StubMyBtn.MinimumSize 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToRightToLeft">
+            <summary>附加委托以将 StubMyBtn.RightToLeft 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToSite">
+            <summary>附加委托以将 StubMyBtn.Site 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.AttachBackingFieldToText">
+            <summary>附加委托以将 StubMyBtn.Text 作为具有支持字段的属性进行模拟。</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoScrollGet">
+            <summary>设置 ScrollableControl.get_AutoScroll() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoScrollOffsetGet">
+            <summary>设置 Control.get_AutoScrollOffset() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoScrollOffsetSetPoint">
+            <summary>设置 Control.set_AutoScrollOffset(Point value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoScrollSetBoolean">
+            <summary>设置 ScrollableControl.set_AutoScroll(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoSizeGet">
+            <summary>设置 UserControl.get_AutoSize() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoSizeSetBoolean">
+            <summary>设置 UserControl.set_AutoSize(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoValidateGet">
+            <summary>设置 UserControl.get_AutoValidate() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.AutoValidateSetAutoValidate">
+            <summary>设置 UserControl.set_AutoValidate(AutoValidate value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackColorGet">
+            <summary>设置 Control.get_BackColor() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackColorSetColor">
+            <summary>设置 Control.set_BackColor(Color value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackgroundImageGet">
+            <summary>设置 Control.get_BackgroundImage() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackgroundImageLayoutGet">
+            <summary>设置 Control.get_BackgroundImageLayout() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackgroundImageLayoutSetImageLayout">
+            <summary>设置 Control.set_BackgroundImageLayout(ImageLayout value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BackgroundImageSetImage">
+            <summary>设置 Control.set_BackgroundImage(Image value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BindingContextGet">
+            <summary>设置 ContainerControl.get_BindingContext() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.BindingContextSetBindingContext">
+            <summary>设置 ContainerControl.set_BindingContext(BindingContext value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CanEnableImeGet">
+            <summary>设置 ContainerControl.get_CanEnableIme() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CanRaiseEventsGet">
+            <summary>设置 Control.get_CanRaiseEvents() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ContextMenuGet">
+            <summary>设置 Control.get_ContextMenu() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ContextMenuSetContextMenu">
+            <summary>设置 Control.set_ContextMenu(ContextMenu value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ContextMenuStripGet">
+            <summary>设置 Control.get_ContextMenuStrip() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ContextMenuStripSetContextMenuStrip">
+            <summary>设置 Control.set_ContextMenuStrip(ContextMenuStrip value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.CreateAccessibilityInstance">
+            <summary>设置 Control.CreateAccessibilityInstance() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CreateAccessibilityInstance01">
+            <summary>设置 Control.CreateAccessibilityInstance() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.CreateControlsInstance">
+            <summary>设置 Control.CreateControlsInstance() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CreateControlsInstance01">
+            <summary>设置 Control.CreateControlsInstance() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.CreateHandle">
+            <summary>设置 Control.CreateHandle() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CreateHandle01">
+            <summary>设置 Control.CreateHandle() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CreateParamsGet">
+            <summary>设置 UserControl.get_CreateParams() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CursorGet">
+            <summary>设置 Control.get_Cursor() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.CursorSetCursor">
+            <summary>设置 Control.set_Cursor(Cursor value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.DefWndProc(System.Windows.Forms.Message@)">
+            <summary>设置 Control.DefWndProc(Message&amp; m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefWndProcMessageRef">
+            <summary>设置 Control.DefWndProc(Message&amp; m) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultCursorGet">
+            <summary>设置 Control.get_DefaultCursor() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultImeModeGet">
+            <summary>设置 Control.get_DefaultImeMode() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultMarginGet">
+            <summary>设置 Control.get_DefaultMargin() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultMaximumSizeGet">
+            <summary>设置 Control.get_DefaultMaximumSize() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultMinimumSizeGet">
+            <summary>设置 Control.get_DefaultMinimumSize() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultPaddingGet">
+            <summary>设置 Control.get_DefaultPadding() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DefaultSizeGet">
+            <summary>设置 UserControl.get_DefaultSize() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.DestroyHandle">
+            <summary>设置 Control.DestroyHandle() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DestroyHandle01">
+            <summary>设置 Control.DestroyHandle() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DisplayRectangleGet">
+            <summary>设置 ScrollableControl.get_DisplayRectangle() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.Dispose(System.Boolean)">
+            <summary>设置 MyBtn.Dispose(Boolean disposing) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DisposeBoolean">
+            <summary>设置 MyBtn.Dispose(Boolean disposing) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DockGet">
+            <summary>设置 Control.get_Dock() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DockSetDockStyle">
+            <summary>设置 Control.set_Dock(DockStyle value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DoubleBufferedGet">
+            <summary>设置 Control.get_DoubleBuffered() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.DoubleBufferedSetBoolean">
+            <summary>设置 Control.set_DoubleBuffered(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.FocusedGet">
+            <summary>设置 Control.get_Focused() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.FontGet">
+            <summary>设置 Control.get_Font() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.FontSetFont">
+            <summary>设置 Control.set_Font(Font value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ForeColorGet">
+            <summary>设置 Control.get_ForeColor() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ForeColorSetColor">
+            <summary>设置 Control.set_ForeColor(Color value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.GetAccessibilityObjectById(System.Int32)">
+            <summary>设置 Control.GetAccessibilityObjectById(Int32 objectId) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.GetAccessibilityObjectByIdInt32">
+            <summary>设置 Control.GetAccessibilityObjectById(Int32 objectId) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.GetPreferredSize(System.Drawing.Size)">
+            <summary>设置 Control.GetPreferredSize(Size proposedSize) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.GetPreferredSizeSize">
+            <summary>设置 Control.GetPreferredSize(Size proposedSize) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.GetScaledBounds(System.Drawing.Rectangle,System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>设置 Control.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.GetScaledBoundsRectangleSizeFBoundsSpecified">
+            <summary>设置 Control.GetScaledBounds(Rectangle bounds, SizeF factor, BoundsSpecified specified) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.GetService(System.Type)">
+            <summary>设置 Component.GetService(Type service) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.GetServiceType">
+            <summary>设置 Component.GetService(Type service) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ImeModeBaseGet">
+            <summary>设置 Control.get_ImeModeBase() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ImeModeBaseSetImeMode">
+            <summary>设置 Control.set_ImeModeBase(ImeMode value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.InitLayout">
+            <summary>设置 Control.InitLayout() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.InitLayout01">
+            <summary>设置 Control.InitLayout() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.InitializeStub">
+            <summary>初始化 type StubMyBtn 的新实例</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.IsInputChar(System.Char)">
+            <summary>设置 Control.IsInputChar(Char charCode) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.IsInputCharChar">
+            <summary>设置 Control.IsInputChar(Char charCode) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.IsInputKey(System.Windows.Forms.Keys)">
+            <summary>设置 Control.IsInputKey(Keys keyData) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.IsInputKeyKeys">
+            <summary>设置 Control.IsInputKey(Keys keyData) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.LayoutEngineGet">
+            <summary>设置 Control.get_LayoutEngine() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.MaximumSizeGet">
+            <summary>设置 Control.get_MaximumSize() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.MaximumSizeSetSize">
+            <summary>设置 Control.set_MaximumSize(Size value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.MinimumSizeGet">
+            <summary>设置 Control.get_MinimumSize() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.MinimumSizeSetSize">
+            <summary>设置 Control.set_MinimumSize(Size value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.NotifyInvalidate(System.Drawing.Rectangle)">
+            <summary>设置 Control.NotifyInvalidate(Rectangle invalidatedArea) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.NotifyInvalidateRectangle">
+            <summary>设置 Control.NotifyInvalidate(Rectangle invalidatedArea) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnAutoSizeChanged(System.EventArgs)">
+            <summary>设置 Control.OnAutoSizeChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnAutoSizeChangedEventArgs">
+            <summary>设置 Control.OnAutoSizeChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnAutoValidateChanged(System.EventArgs)">
+            <summary>设置 ContainerControl.OnAutoValidateChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnAutoValidateChangedEventArgs">
+            <summary>设置 ContainerControl.OnAutoValidateChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnBackColorChanged(System.EventArgs)">
+            <summary>设置 Control.OnBackColorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnBackColorChangedEventArgs">
+            <summary>设置 Control.OnBackColorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnBackgroundImageChanged(System.EventArgs)">
+            <summary>设置 Control.OnBackgroundImageChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnBackgroundImageChangedEventArgs">
+            <summary>设置 Control.OnBackgroundImageChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnBackgroundImageLayoutChanged(System.EventArgs)">
+            <summary>设置 Control.OnBackgroundImageLayoutChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnBackgroundImageLayoutChangedEventArgs">
+            <summary>设置 Control.OnBackgroundImageLayoutChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnBindingContextChanged(System.EventArgs)">
+            <summary>设置 Control.OnBindingContextChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnBindingContextChangedEventArgs">
+            <summary>设置 Control.OnBindingContextChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnCausesValidationChanged(System.EventArgs)">
+            <summary>设置 Control.OnCausesValidationChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnCausesValidationChangedEventArgs">
+            <summary>设置 Control.OnCausesValidationChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnChangeUICues(System.Windows.Forms.UICuesEventArgs)">
+            <summary>设置 Control.OnChangeUICues(UICuesEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnChangeUICuesUICuesEventArgs">
+            <summary>设置 Control.OnChangeUICues(UICuesEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnClick(System.EventArgs)">
+            <summary>设置 Control.OnClick(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnClickEventArgs">
+            <summary>设置 Control.OnClick(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnClientSizeChanged(System.EventArgs)">
+            <summary>设置 Control.OnClientSizeChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnClientSizeChangedEventArgs">
+            <summary>设置 Control.OnClientSizeChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnContextMenuChanged(System.EventArgs)">
+            <summary>设置 Control.OnContextMenuChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnContextMenuChangedEventArgs">
+            <summary>设置 Control.OnContextMenuChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnContextMenuStripChanged(System.EventArgs)">
+            <summary>设置 Control.OnContextMenuStripChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnContextMenuStripChangedEventArgs">
+            <summary>设置 Control.OnContextMenuStripChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnControlAdded(System.Windows.Forms.ControlEventArgs)">
+            <summary>设置 Control.OnControlAdded(ControlEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnControlAddedControlEventArgs">
+            <summary>设置 Control.OnControlAdded(ControlEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnControlRemoved(System.Windows.Forms.ControlEventArgs)">
+            <summary>设置 Control.OnControlRemoved(ControlEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnControlRemovedControlEventArgs">
+            <summary>设置 Control.OnControlRemoved(ControlEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnCreateControl">
+            <summary>设置 UserControl.OnCreateControl() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnCreateControl01">
+            <summary>设置 UserControl.OnCreateControl() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnCursorChanged(System.EventArgs)">
+            <summary>设置 Control.OnCursorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnCursorChangedEventArgs">
+            <summary>设置 Control.OnCursorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDockChanged(System.EventArgs)">
+            <summary>设置 Control.OnDockChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDockChangedEventArgs">
+            <summary>设置 Control.OnDockChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDoubleClick(System.EventArgs)">
+            <summary>设置 Control.OnDoubleClick(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDoubleClickEventArgs">
+            <summary>设置 Control.OnDoubleClick(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDragDrop(System.Windows.Forms.DragEventArgs)">
+            <summary>设置 Control.OnDragDrop(DragEventArgs drgevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDragDropDragEventArgs">
+            <summary>设置 Control.OnDragDrop(DragEventArgs drgevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDragEnter(System.Windows.Forms.DragEventArgs)">
+            <summary>设置 Control.OnDragEnter(DragEventArgs drgevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDragEnterDragEventArgs">
+            <summary>设置 Control.OnDragEnter(DragEventArgs drgevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDragLeave(System.EventArgs)">
+            <summary>设置 Control.OnDragLeave(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDragLeaveEventArgs">
+            <summary>设置 Control.OnDragLeave(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnDragOver(System.Windows.Forms.DragEventArgs)">
+            <summary>设置 Control.OnDragOver(DragEventArgs drgevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnDragOverDragEventArgs">
+            <summary>设置 Control.OnDragOver(DragEventArgs drgevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnEnabledChanged(System.EventArgs)">
+            <summary>设置 Control.OnEnabledChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnEnabledChangedEventArgs">
+            <summary>设置 Control.OnEnabledChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnEnter(System.EventArgs)">
+            <summary>设置 Control.OnEnter(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnEnterEventArgs">
+            <summary>设置 Control.OnEnter(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnFontChanged(System.EventArgs)">
+            <summary>设置 ContainerControl.OnFontChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnFontChangedEventArgs">
+            <summary>设置 ContainerControl.OnFontChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnForeColorChanged(System.EventArgs)">
+            <summary>设置 Control.OnForeColorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnForeColorChangedEventArgs">
+            <summary>设置 Control.OnForeColorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnGiveFeedback(System.Windows.Forms.GiveFeedbackEventArgs)">
+            <summary>设置 Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>设置 Control.OnGiveFeedback(GiveFeedbackEventArgs gfbevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnGotFocus(System.EventArgs)">
+            <summary>设置 Control.OnGotFocus(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnGotFocusEventArgs">
+            <summary>设置 Control.OnGotFocus(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnHandleCreated(System.EventArgs)">
+            <summary>设置 Control.OnHandleCreated(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnHandleCreatedEventArgs">
+            <summary>设置 Control.OnHandleCreated(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnHandleDestroyed(System.EventArgs)">
+            <summary>设置 Control.OnHandleDestroyed(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnHandleDestroyedEventArgs">
+            <summary>设置 Control.OnHandleDestroyed(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnHelpRequested(System.Windows.Forms.HelpEventArgs)">
+            <summary>设置 Control.OnHelpRequested(HelpEventArgs hevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnHelpRequestedHelpEventArgs">
+            <summary>设置 Control.OnHelpRequested(HelpEventArgs hevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnImeModeChanged(System.EventArgs)">
+            <summary>设置 Control.OnImeModeChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnImeModeChangedEventArgs">
+            <summary>设置 Control.OnImeModeChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnInvalidated(System.Windows.Forms.InvalidateEventArgs)">
+            <summary>设置 Control.OnInvalidated(InvalidateEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnInvalidatedInvalidateEventArgs">
+            <summary>设置 Control.OnInvalidated(InvalidateEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnKeyDown(System.Windows.Forms.KeyEventArgs)">
+            <summary>设置 Control.OnKeyDown(KeyEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnKeyDownKeyEventArgs">
+            <summary>设置 Control.OnKeyDown(KeyEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnKeyPress(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>设置 Control.OnKeyPress(KeyPressEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnKeyPressKeyPressEventArgs">
+            <summary>设置 Control.OnKeyPress(KeyPressEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnKeyUp(System.Windows.Forms.KeyEventArgs)">
+            <summary>设置 Control.OnKeyUp(KeyEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnKeyUpKeyEventArgs">
+            <summary>设置 Control.OnKeyUp(KeyEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnLayout(System.Windows.Forms.LayoutEventArgs)">
+            <summary>设置 ContainerControl.OnLayout(LayoutEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnLayoutLayoutEventArgs">
+            <summary>设置 ContainerControl.OnLayout(LayoutEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnLeave(System.EventArgs)">
+            <summary>设置 Control.OnLeave(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnLeaveEventArgs">
+            <summary>设置 Control.OnLeave(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnLoad(System.EventArgs)">
+            <summary>设置 UserControl.OnLoad(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnLoadEventArgs">
+            <summary>设置 UserControl.OnLoad(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnLocationChanged(System.EventArgs)">
+            <summary>设置 Control.OnLocationChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnLocationChangedEventArgs">
+            <summary>设置 Control.OnLocationChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnLostFocus(System.EventArgs)">
+            <summary>设置 Control.OnLostFocus(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnLostFocusEventArgs">
+            <summary>设置 Control.OnLostFocus(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMarginChanged(System.EventArgs)">
+            <summary>设置 Control.OnMarginChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMarginChangedEventArgs">
+            <summary>设置 Control.OnMarginChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseCaptureChanged(System.EventArgs)">
+            <summary>设置 Control.OnMouseCaptureChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseCaptureChangedEventArgs">
+            <summary>设置 Control.OnMouseCaptureChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 Control.OnMouseClick(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseClickMouseEventArgs">
+            <summary>设置 Control.OnMouseClick(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseDoubleClick(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 Control.OnMouseDoubleClick(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseDoubleClickMouseEventArgs">
+            <summary>设置 Control.OnMouseDoubleClick(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 UserControl.OnMouseDown(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseDownMouseEventArgs">
+            <summary>设置 UserControl.OnMouseDown(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseEnter(System.EventArgs)">
+            <summary>设置 Control.OnMouseEnter(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseEnterEventArgs">
+            <summary>设置 Control.OnMouseEnter(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseHover(System.EventArgs)">
+            <summary>设置 Control.OnMouseHover(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseHoverEventArgs">
+            <summary>设置 Control.OnMouseHover(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseLeave(System.EventArgs)">
+            <summary>设置 Control.OnMouseLeave(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseLeaveEventArgs">
+            <summary>设置 Control.OnMouseLeave(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 Control.OnMouseMove(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseMoveMouseEventArgs">
+            <summary>设置 Control.OnMouseMove(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 Control.OnMouseUp(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseUpMouseEventArgs">
+            <summary>设置 Control.OnMouseUp(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMouseWheel(System.Windows.Forms.MouseEventArgs)">
+            <summary>设置 ScrollableControl.OnMouseWheel(MouseEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMouseWheelMouseEventArgs">
+            <summary>设置 ScrollableControl.OnMouseWheel(MouseEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnMove(System.EventArgs)">
+            <summary>设置 Control.OnMove(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnMoveEventArgs">
+            <summary>设置 Control.OnMove(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnNotifyMessage(System.Windows.Forms.Message)">
+            <summary>设置 Control.OnNotifyMessage(Message m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnNotifyMessageMessage">
+            <summary>设置 Control.OnNotifyMessage(Message m) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnPaddingChanged(System.EventArgs)">
+            <summary>设置 ScrollableControl.OnPaddingChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnPaddingChangedEventArgs">
+            <summary>设置 ScrollableControl.OnPaddingChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>设置 MyBtn.OnPaint(PaintEventArgs e) 的 存根</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>设置 ScrollableControl.OnPaintBackground(PaintEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnPaintBackgroundPaintEventArgs">
+            <summary>设置 ScrollableControl.OnPaintBackground(PaintEventArgs e) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnPaintPaintEventArgs">
+            <summary>设置 MyBtn.OnPaint(PaintEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentBackColorChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentBackColorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentBackColorChangedEventArgs">
+            <summary>设置 Control.OnParentBackColorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentBackgroundImageChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentBackgroundImageChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentBackgroundImageChangedEventArgs">
+            <summary>设置 Control.OnParentBackgroundImageChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentBindingContextChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentBindingContextChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentBindingContextChangedEventArgs">
+            <summary>设置 Control.OnParentBindingContextChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentChanged(System.EventArgs)">
+            <summary>设置 ContainerControl.OnParentChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentChangedEventArgs">
+            <summary>设置 ContainerControl.OnParentChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentCursorChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentCursorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentCursorChangedEventArgs">
+            <summary>设置 Control.OnParentCursorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentEnabledChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentEnabledChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentEnabledChangedEventArgs">
+            <summary>设置 Control.OnParentEnabledChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentFontChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentFontChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentFontChangedEventArgs">
+            <summary>设置 Control.OnParentFontChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentForeColorChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentForeColorChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentForeColorChangedEventArgs">
+            <summary>设置 Control.OnParentForeColorChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentRightToLeftChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentRightToLeftChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentRightToLeftChangedEventArgs">
+            <summary>设置 Control.OnParentRightToLeftChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnParentVisibleChanged(System.EventArgs)">
+            <summary>设置 Control.OnParentVisibleChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnParentVisibleChangedEventArgs">
+            <summary>设置 Control.OnParentVisibleChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnPreviewKeyDown(System.Windows.Forms.PreviewKeyDownEventArgs)">
+            <summary>设置 Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnPreviewKeyDownPreviewKeyDownEventArgs">
+            <summary>设置 Control.OnPreviewKeyDown(PreviewKeyDownEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnPrint(System.Windows.Forms.PaintEventArgs)">
+            <summary>设置 Control.OnPrint(PaintEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnPrintPaintEventArgs">
+            <summary>设置 Control.OnPrint(PaintEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnQueryContinueDrag(System.Windows.Forms.QueryContinueDragEventArgs)">
+            <summary>设置 Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>设置 Control.OnQueryContinueDrag(QueryContinueDragEventArgs qcdevent) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnRegionChanged(System.EventArgs)">
+            <summary>设置 Control.OnRegionChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnRegionChangedEventArgs">
+            <summary>设置 Control.OnRegionChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnResize(System.EventArgs)">
+            <summary>设置 UserControl.OnResize(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnResizeEventArgs">
+            <summary>设置 UserControl.OnResize(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnRightToLeftChanged(System.EventArgs)">
+            <summary>设置 ScrollableControl.OnRightToLeftChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnRightToLeftChangedEventArgs">
+            <summary>设置 ScrollableControl.OnRightToLeftChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnScroll(System.Windows.Forms.ScrollEventArgs)">
+            <summary>设置 ScrollableControl.OnScroll(ScrollEventArgs se) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnScrollScrollEventArgs">
+            <summary>设置 ScrollableControl.OnScroll(ScrollEventArgs se) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnSizeChanged(System.EventArgs)">
+            <summary>设置 Control.OnSizeChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnSizeChangedEventArgs">
+            <summary>设置 Control.OnSizeChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnStyleChanged(System.EventArgs)">
+            <summary>设置 Control.OnStyleChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnStyleChangedEventArgs">
+            <summary>设置 Control.OnStyleChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnSystemColorsChanged(System.EventArgs)">
+            <summary>设置 Control.OnSystemColorsChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnSystemColorsChangedEventArgs">
+            <summary>设置 Control.OnSystemColorsChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnTabIndexChanged(System.EventArgs)">
+            <summary>设置 Control.OnTabIndexChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnTabIndexChangedEventArgs">
+            <summary>设置 Control.OnTabIndexChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnTabStopChanged(System.EventArgs)">
+            <summary>设置 Control.OnTabStopChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnTabStopChangedEventArgs">
+            <summary>设置 Control.OnTabStopChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnTextChanged(System.EventArgs)">
+            <summary>设置 Control.OnTextChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnTextChangedEventArgs">
+            <summary>设置 Control.OnTextChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnValidated(System.EventArgs)">
+            <summary>设置 Control.OnValidated(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnValidatedEventArgs">
+            <summary>设置 Control.OnValidated(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnValidating(System.ComponentModel.CancelEventArgs)">
+            <summary>设置 Control.OnValidating(CancelEventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnValidatingCancelEventArgs">
+            <summary>设置 Control.OnValidating(CancelEventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.OnVisibleChanged(System.EventArgs)">
+            <summary>设置 ScrollableControl.OnVisibleChanged(EventArgs e) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.OnVisibleChangedEventArgs">
+            <summary>设置 ScrollableControl.OnVisibleChanged(EventArgs e) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.PreProcessMessage(System.Windows.Forms.Message@)">
+            <summary>设置 Control.PreProcessMessage(Message&amp; msg) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.PreProcessMessageMessageRef">
+            <summary>设置 Control.PreProcessMessage(Message&amp; msg) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessCmdKey(System.Windows.Forms.Message@,System.Windows.Forms.Keys)">
+            <summary>设置 ContainerControl.ProcessCmdKey(Message&amp; msg, Keys keyData) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessCmdKeyMessageRefKeys">
+            <summary>设置 ContainerControl.ProcessCmdKey(Message&amp; msg, Keys keyData) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessDialogChar(System.Char)">
+            <summary>设置 ContainerControl.ProcessDialogChar(Char charCode) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessDialogCharChar">
+            <summary>设置 ContainerControl.ProcessDialogChar(Char charCode) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessDialogKey(System.Windows.Forms.Keys)">
+            <summary>设置 ContainerControl.ProcessDialogKey(Keys keyData) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessDialogKeyKeys">
+            <summary>设置 ContainerControl.ProcessDialogKey(Keys keyData) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessKeyEventArgs(System.Windows.Forms.Message@)">
+            <summary>设置 Control.ProcessKeyEventArgs(Message&amp; m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessKeyEventArgsMessageRef">
+            <summary>设置 Control.ProcessKeyEventArgs(Message&amp; m) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessKeyMessage(System.Windows.Forms.Message@)">
+            <summary>设置 Control.ProcessKeyMessage(Message&amp; m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessKeyMessageMessageRef">
+            <summary>设置 Control.ProcessKeyMessage(Message&amp; m) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessKeyPreview(System.Windows.Forms.Message@)">
+            <summary>设置 Control.ProcessKeyPreview(Message&amp; m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessKeyPreviewMessageRef">
+            <summary>设置 Control.ProcessKeyPreview(Message&amp; m) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessMnemonic(System.Char)">
+            <summary>设置 ContainerControl.ProcessMnemonic(Char charCode) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessMnemonicChar">
+            <summary>设置 ContainerControl.ProcessMnemonic(Char charCode) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ProcessTabKey(System.Boolean)">
+            <summary>设置 ContainerControl.ProcessTabKey(Boolean forward) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ProcessTabKeyBoolean">
+            <summary>设置 ContainerControl.ProcessTabKey(Boolean forward) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.Refresh">
+            <summary>设置 Control.Refresh() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.Refresh01">
+            <summary>设置 Control.Refresh() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetBackColor">
+            <summary>设置 Control.ResetBackColor() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetBackColor01">
+            <summary>设置 Control.ResetBackColor() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetCursor">
+            <summary>设置 Control.ResetCursor() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetCursor01">
+            <summary>设置 Control.ResetCursor() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetFont">
+            <summary>设置 Control.ResetFont() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetFont01">
+            <summary>设置 Control.ResetFont() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetForeColor">
+            <summary>设置 Control.ResetForeColor() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetForeColor01">
+            <summary>设置 Control.ResetForeColor() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetRightToLeft">
+            <summary>设置 Control.ResetRightToLeft() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetRightToLeft01">
+            <summary>设置 Control.ResetRightToLeft() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ResetText">
+            <summary>设置 Control.ResetText() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ResetText01">
+            <summary>设置 Control.ResetText() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.RightToLeftGet">
+            <summary>设置 Control.get_RightToLeft() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.RightToLeftSetRightToLeft">
+            <summary>设置 Control.set_RightToLeft(RightToLeft value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ScaleChildrenGet">
+            <summary>设置 Control.get_ScaleChildren() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ScaleControl(System.Drawing.SizeF,System.Windows.Forms.BoundsSpecified)">
+            <summary>设置 ScrollableControl.ScaleControl(SizeF factor, BoundsSpecified specified) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ScaleControlSizeFBoundsSpecified">
+            <summary>设置 ScrollableControl.ScaleControl(SizeF factor, BoundsSpecified specified) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ScaleCore(System.Single,System.Single)">
+            <summary>设置 ScrollableControl.ScaleCore(Single dx, Single dy) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ScaleCoreSingleSingle">
+            <summary>设置 ScrollableControl.ScaleCore(Single dx, Single dy) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ScrollToControl(System.Windows.Forms.Control)">
+            <summary>设置 ScrollableControl.ScrollToControl(Control activeControl) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ScrollToControlControl">
+            <summary>设置 ScrollableControl.ScrollToControl(Control activeControl) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.Select(System.Boolean,System.Boolean)">
+            <summary>设置 ContainerControl.Select(Boolean directed, Boolean forward) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SelectBooleanBoolean">
+            <summary>设置 ContainerControl.Select(Boolean directed, Boolean forward) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.SetBoundsCore(System.Int32,System.Int32,System.Int32,System.Int32,System.Windows.Forms.BoundsSpecified)">
+            <summary>设置 Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SetBoundsCoreInt32Int32Int32Int32BoundsSpecified">
+            <summary>设置 Control.SetBoundsCore(Int32 x, Int32 y, Int32 width, Int32 height, BoundsSpecified specified) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.SetClientSizeCore(System.Int32,System.Int32)">
+            <summary>设置 Control.SetClientSizeCore(Int32 x, Int32 y) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SetClientSizeCoreInt32Int32">
+            <summary>设置 Control.SetClientSizeCore(Int32 x, Int32 y) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.SetVisibleCore(System.Boolean)">
+            <summary>设置 Control.SetVisibleCore(Boolean value) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SetVisibleCoreBoolean">
+            <summary>设置 Control.SetVisibleCore(Boolean value) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ShowFocusCuesGet">
+            <summary>设置 Control.get_ShowFocusCues() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ShowKeyboardCuesGet">
+            <summary>设置 Control.get_ShowKeyboardCues() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SiteGet">
+            <summary>设置 Control.get_Site() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SiteSetISite">
+            <summary>设置 Control.set_Site(ISite value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.SizeFromClientSize(System.Drawing.Size)">
+            <summary>设置 Control.SizeFromClientSize(Size clientSize) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.SizeFromClientSizeSize">
+            <summary>设置 Control.SizeFromClientSize(Size clientSize) 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.TextGet">
+            <summary>设置 UserControl.get_Text() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.TextSetString">
+            <summary>设置 UserControl.set_Text(String value) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ToString">
+            <summary>设置 Component.ToString() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ToString01">
+            <summary>设置 Component.ToString() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.UpdateDefaultButton">
+            <summary>设置 ContainerControl.UpdateDefaultButton() 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.UpdateDefaultButton01">
+            <summary>设置 ContainerControl.UpdateDefaultButton() 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ValidateChildren">
+            <summary>设置 UserControl.ValidateChildren() 的 存根</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.ValidateChildren(System.Windows.Forms.ValidationConstraints)">
+            <summary>设置 UserControl.ValidateChildren(ValidationConstraints validationConstraints) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ValidateChildren01">
+            <summary>设置 UserControl.ValidateChildren() 的 stub</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.ValidateChildrenValidationConstraints">
+            <summary>设置 UserControl.ValidateChildren(ValidationConstraints validationConstraints) 的 stub</summary>
+        </member>
+        <member name="M:MyBtn.Fakes.StubMyBtn.WndProc(System.Windows.Forms.Message@)">
+            <summary>设置 UserControl.WndProc(Message&amp; m) 的 存根</summary>
+        </member>
+        <member name="F:MyBtn.Fakes.StubMyBtn.WndProcMessageRef">
+            <summary>设置 UserControl.WndProc(Message&amp; m) 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.AllowDrop">
+            <summary>设置 Control.get_AllowDrop() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Anchor">
+            <summary>设置 Control.get_Anchor() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.AutoScroll">
+            <summary>设置 ScrollableControl.get_AutoScroll() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.AutoScrollOffset">
+            <summary>设置 Control.get_AutoScrollOffset() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.AutoSize">
+            <summary>设置 UserControl.get_AutoSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.AutoValidate">
+            <summary>设置 UserControl.get_AutoValidate() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.BackColor">
+            <summary>设置 Control.get_BackColor() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.BackgroundImage">
+            <summary>设置 Control.get_BackgroundImage() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.BackgroundImageLayout">
+            <summary>设置 Control.get_BackgroundImageLayout() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.BindingContext">
+            <summary>设置 ContainerControl.get_BindingContext() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.CallBase">
+            <summary>获取或设置一个值，该值指示是否应调用基方法而不调用回退行为</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.CanEnableIme">
+            <summary>设置 ContainerControl.get_CanEnableIme() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.CanRaiseEvents">
+            <summary>设置 Control.get_CanRaiseEvents() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ContextMenu">
+            <summary>设置 Control.get_ContextMenu() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ContextMenuStrip">
+            <summary>设置 Control.get_ContextMenuStrip() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.CreateParams">
+            <summary>设置 UserControl.get_CreateParams() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Cursor">
+            <summary>设置 Control.get_Cursor() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultCursor">
+            <summary>设置 Control.get_DefaultCursor() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultImeMode">
+            <summary>设置 Control.get_DefaultImeMode() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultMargin">
+            <summary>设置 Control.get_DefaultMargin() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultMaximumSize">
+            <summary>设置 Control.get_DefaultMaximumSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultMinimumSize">
+            <summary>设置 Control.get_DefaultMinimumSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultPadding">
+            <summary>设置 Control.get_DefaultPadding() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DefaultSize">
+            <summary>设置 UserControl.get_DefaultSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DisplayRectangle">
+            <summary>设置 ScrollableControl.get_DisplayRectangle() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Dock">
+            <summary>设置 Control.get_Dock() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.DoubleBuffered">
+            <summary>设置 Control.get_DoubleBuffered() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Focused">
+            <summary>设置 Control.get_Focused() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Font">
+            <summary>设置 Control.get_Font() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ForeColor">
+            <summary>设置 Control.get_ForeColor() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ImeModeBase">
+            <summary>设置 Control.get_ImeModeBase() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.InstanceBehavior">
+            <summary>获取或设置实例行为。</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.InstanceObserver">
+            <summary>获取或设置实例观察者。</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.LayoutEngine">
+            <summary>设置 Control.get_LayoutEngine() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.MaximumSize">
+            <summary>设置 Control.get_MaximumSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.MinimumSize">
+            <summary>设置 Control.get_MinimumSize() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.RightToLeft">
+            <summary>设置 Control.get_RightToLeft() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ScaleChildren">
+            <summary>设置 Control.get_ScaleChildren() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ShowFocusCues">
+            <summary>设置 Control.get_ShowFocusCues() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.ShowKeyboardCues">
+            <summary>设置 Control.get_ShowKeyboardCues() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Site">
+            <summary>设置 Control.get_Site() 的 stub</summary>
+        </member>
+        <member name="P:MyBtn.Fakes.StubMyBtn.Text">
+            <summary>设置 UserControl.get_Text() 的 stub</summary>
+        </member>
+    </members>
+</doc>

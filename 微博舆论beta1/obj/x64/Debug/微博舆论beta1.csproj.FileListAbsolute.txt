@@ -1,0 +1,128 @@
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.pdb
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.dll
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.dll
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.pdb
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Form1.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageRes.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ProgressForm.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Properties.Resources.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Seq.StringRes.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.机型数据管理.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.终端分类Dict.resources
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.GenerateResource.Cache
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojResolveAssemblyReference.cache
+C:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ChangeItemContent.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojResolveAssemblyReference.cache
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ChangeItemContent.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Form1.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageRes.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ProgressForm.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Properties.Resources.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Seq.StringRes.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.机型数据管理.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.终端分类Dict.resources
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.GenerateResource.Cache
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.pdb
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.dll
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.pdb
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Users\leaf\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageViewForm.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.pdb
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.dll
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.pdb
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.xml
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojResolveAssemblyReference.cache
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ChangeItemContent.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Form1.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageRes.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageViewForm.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ProgressForm.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Properties.Resources.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Seq.StringRes.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.机型数据管理.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.终端分类Dict.resources
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.GenerateResource.Cache
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+C:\Users\chen\Documents\Visual Studio 2012\Projects\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojResolveAssemblyReference.cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ChangeItemContent.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Form1.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageRes.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageViewForm.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ProgressForm.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Properties.Resources.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Seq.StringRes.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.机型数据管理.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.终端分类Dict.resources
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.GenerateResource.Cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\MyBtn.1.0.0.0.Fakes.fakesconfig
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojFakesResolveAssemblyReference.cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\fakes.args
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\Microsoft.QualityTools.Testing.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.fakesconfig
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.1.0.0.0.Fakes.xml
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\MyBtn.pdb
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\Newtonsoft.Json.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\b\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.ah
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.ch
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.cs
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.csproj
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.fakes
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\f.fakesconfig
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\f.csproj.FileListAbsolute.txt
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\f.csprojResolveAssemblyReference.cache
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\MyBtn.1.0.0.0.Fakes.dll
+D:\baiduyundownload\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\Fakes\mb\o\MyBtn.1.0.0.0.Fakes.pdb
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe.config
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.ResolveComReference.cache
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.exe
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.pdb
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.exe
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\微博舆论beta1.pdb
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\Newtonsoft.Json.xml
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\bin\x64\Debug\zh-Hans\Microsoft.QualityTools.Testing.Fakes.resources.dll
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csprojResolveAssemblyReference.cache
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ChangeItemContent.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Form1.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageRes.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ImageViewForm.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.ProgressForm.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Properties.Resources.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.Seq.StringRes.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.机型数据管理.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论.终端分类Dict.resources
+D:\baidu\微博舆情监测系统研究\微博舆论beta1\微博舆论beta1\obj\x64\Debug\微博舆论beta1.csproj.GenerateResource.Cache
